@@ -1,0 +1,216 @@
+HOW TO REPLICATE THE PARAMANU RESULTS ON YOUR OWN MACHINE
+==========================================================
+
+Everything in the paper and in Results.txt is computed by the code in
+simulation/. This file takes you from a fresh computer to the same numbers,
+step by step. Commands are for Linux or macOS (on Windows use WSL, the
+Windows Subsystem for Linux). Lines starting with "$" are typed in a
+terminal, without the "$".
+
+What you need
+-------------
+* Python 3.10 (all published results used 3.10.12). Newer Python versions
+  are likely to work but are not what we tested.
+* About 2 GB of disk and any computer from the last ten years.
+* Time: tests 1 minute; the core results 10 minutes; all experiments except
+  the large sweeps about 1.5 hours on 2 cores. The 5,000-feed sweep takes
+  about 5 core-hours (about 3.5 core-seconds per feed on a server core,
+  10-20 s per feed on a laptop core), so it is best run on a many-core
+  machine or a rented cloud server (step 8). The adversarial search is
+  about 6,600 more feeds.
+
+
+STEP 1. Get the code
+--------------------
+    $ git clone https://github.com/syncaissa/paramanu-reclaimer.git
+    $ cd paramanu-reclaimer
+
+(Or download the ZIP from the GitHub page and unpack it.)
+
+
+STEP 2. Install the exact library versions
+------------------------------------------
+    $ python3.10 -m venv .venv
+    $ source .venv/bin/activate          (Windows WSL: the same)
+    $ pip install -r simulation/requirements.txt
+
+Use these pinned versions (Cantera 3.2.0, NumPy 2.2.6, SciPy 1.15.3,
+pandas 2.3.3, matplotlib 3.10.9). With newer SciPy/pandas some sweep feeds
+stalled in our tests, so the results are only claimed for these versions.
+Check:
+    $ python -c "import cantera, numpy, scipy, pandas; print(cantera.__version__, numpy.__version__, scipy.__version__, pandas.__version__)"
+    3.2.0 2.2.6 1.15.3 2.3.3
+
+
+STEP 3. Run the automated tests (1 minute)
+------------------------------------------
+    $ cd simulation
+    $ pytest
+
+Expected: "38 passed". The tests check element conservation (Result 1),
+the uniqueness of the equilibrium (Result 2), the condensation formula
+(Result 3), the boiling points of pure elements, that every equilibrium
+state of the ladder passes the certificate, and the trace-metal data.
+If any test fails, stop: your installation differs from ours (step 2).
+
+
+STEP 4. Check that you have the same code (seconds)
+---------------------------------------------------
+    $ python tools/write_results.py --fingerprint
+
+This prints a 16-character fingerprint of all the code and data files.
+Compare it with the "Code fingerprint" line near the top of Results.txt.
+If they differ, your copy of the code is not the one that produced the
+published results (for example a newer version from GitHub).
+
+
+STEP 5. Reproduce the core result (10 minutes)
+----------------------------------------------
+    $ cd scripts
+    $ python 01_validate.py
+    $ python 02_ladder.py
+
+Compare with Results.txt, sections 1 and 2. You should get, among others:
+  * boiling points: median error 0.16%, maximum 2.29%
+  * gold: 58.1% in Band B, 41.9% in Band C
+  * T50 (half-condensation temperature): Fe 2,225 K, Au 2,075 K,
+    Cu 1,700 K, Pb 1,025 K, Zn 675 K
+  * mercury still gaseous at 300 K: 50.2%
+Numbers are written to simulation/results/ (CSV files and
+key_numbers.json) and figures to simulation/results/*.png.
+
+
+STEP 6. Run every experiment except the large sweeps (about 1.5 hours)
+----------------------------------------------------------------------
+    $ cd ..                  (back to simulation/)
+    $ ./run_all.sh
+
+This runs scripts 01-18 (validation, ladder, reductant, energy, chamber,
+theory checks, reactor design, convergence, sensitivity, alloying,
+breakdown of complex molecules, benchmarks against published measurements,
+gold between iron and copper, landfill inventory, catalysts, independent
+solver and database), then a small 24-feed sweep with its analysis, and
+finally regenerates ../Results.txt from your results.
+Each script writes a log to simulation/results/log_<script>.txt.
+
+
+STEP 7. What each script is for
+-------------------------------
+    01_validate               boiling points; agreement with Cantera
+    02_ladder                 the condensation ladder (main result)
+    03_reductant              the waste reduces its own metals
+    04_energy                 energy to take the waste fully to gas
+    05_chamber                why a hot batch cannot be held (radiation)
+    06_sweep                  Monte Carlo sweep over random landfills
+    07_theory_checks          closed-form results against the simulation
+    08_reactor_design         hot-zone residence time; condenser duties
+    09_convergence            halving the temperature step
+    10_sensitivity            one-at-a-time sensitivity
+    11_alloy_model            ideal alloys instead of pure metals
+    12_sweep_analysis         tests each claim over the sweep
+    13_breakdown              how complex molecules come apart
+    14_benchmarks             against published measurements
+    15_gold_copper            gold between the iron and copper bands
+    16_landfill_inventory     what one city landfill holds
+    17_catalysts              what catalysts can and cannot do
+    18_independent_verification  second solver (Cantera VCS) and second
+                              database (full NASA CEA, shipped in
+                              paramanu_sim/data/nasa_cea_thermo.inp)
+    19_reproducibility        recompute sweep feeds on your machine
+    20_falsification          optimizer that tries to break the claims
+    21_global_sensitivity     Sobol indices: which input matters
+    22_dilution_and_margin    torch-gas dilution; margin of the Band D split
+    23_self_sufficiency       own fuel + sale of recovered elements vs the electricity bill
+    24_heat_recovery_and_scale  boiler-wall steam, emissivity, modules, grinding, self-sufficiency with steam
+
+Every script starts with a comment block explaining what it computes,
+from which data, and how to run it. docs/STUDENT_GUIDE.md walks through
+the proofs and the scripts chapter by chapter.
+
+
+STEP 8. The 5,000-feed sweep (about 5 core-hours)
+-------------------------------------------------
+Option A, your own machine (uses all its cores; resumes after a crash):
+    $ cd scripts
+    $ OMP_NUM_THREADS=1 python 06_sweep.py --samples 5000
+    $ python 12_sweep_analysis.py --samples 5000
+    $ python 21_global_sensitivity.py --samples 5000
+
+The log shows timestamped STATUS lines (START, PROGRESS with an estimated
+finish time, COMPLETE). If the machine stops, run the same command again:
+finished feeds are kept in results/sweep_5000.partial.jsonl and skipped.
+
+Option B, a rented cloud server (RunPod; about 25-60 minutes, well under
+$1 in our runs):
+    1. Create a RunPod account and an API key.
+    2. Put the key in a file named .runpodapi at the top of the repository:
+           RUNPOD_API_KEY=your_key_here
+       This file is listed in .gitignore. NEVER commit it or share it.
+    3. $ cd simulation/cluster/runpod
+       $ SAMPLES=5000 ./run_on_runpod.sh
+    The script starts a server, uploads the code, runs the tests and the
+    sweep, downloads results/sweep_5000.csv and shuts the server down
+    (also on errors). Then run steps 12 and 21 above locally.
+
+Every feed is defined only by its number and the fixed random seed in
+SweepConfig, so you can recompute any single feed anywhere:
+    $ python 19_reproducibility.py --samples 5000 --check 20
+Expected: largest difference below 1e-6 and "main bands identical: True".
+(Our cloud-versus-workstation check gave 1.1e-13.)
+
+
+STEP 9. The adversarial search (about 6,600 feeds)
+--------------------------------------------------
+Own machine (long):   $ python 20_falsification.py --gens 25 --pop 1
+Cloud server:
+    $ cd simulation/cluster/runpod
+    $ JOB_SCRIPT="20_falsification.py --gens 25 --pop 1" OUTPUTS="falsification.csv" \
+      KEY_PREFIX=falsification LOG_NAME=log_20_falsification.txt ./run_job_on_runpod.sh
+The search is deterministic for a given seed (--seed, default 2026), so
+the same command gives the same sequence of feeds.
+
+
+STEP 10. Compare your results with the published ones
+-----------------------------------------------------
+    $ cd simulation
+    $ cp ../Results.txt ../Results_published.txt       (before regenerating)
+    $ python tools/write_results.py
+    $ diff <(grep -v -e '^Generated' -e '^Source' ../Results_published.txt) \
+           <(grep -v -e '^Generated' -e '^Source' ../Results.txt)
+
+The only lines that should differ are those with dates and run times.
+Any other difference is worth reporting (step 12).
+
+
+STEP 11. Rebuild the paper (optional)
+-------------------------------------
+Needs TeX Live (latex-extra, pictures, science), latexmk, poppler-utils,
+pandoc >= 3 and pdf2htmlEX:
+    $ cd paper
+    $ ./build.sh
+Output: paper/output/PARAMANU_Reclaimer.pdf, .html and .docx. The figures
+are taken from simulation/results/, so the paper shows your own results.
+The detailed companion, AllExplainedHere.pdf, is rebuilt (after the paper,
+which copies the figures) with:
+    $ docs/all_explained/build.sh .
+
+
+STEP 12. If you get a different answer
+--------------------------------------
+Please open an issue on GitHub with:
+  * the code fingerprint (step 4) and the output of step 2's version check
+  * your operating system and Python version
+  * the exact command and the part of its output that differs
+A difference we cannot explain is a result, and it will be listed in the
+corrections log at the end of Results.txt.
+
+
+Troubleshooting
+---------------
+* "ModuleNotFoundError": the virtual environment is not active
+  (source .venv/bin/activate).
+* A sweep runs far slower than the estimates: set OMP_NUM_THREADS=1 so
+  that each worker uses one thread, and check the library versions.
+* Containers and cloud servers: the sweep uses the CPUs the container is
+  allowed (cgroup quota), not the host's core count.
+* Out of memory: run with fewer workers, e.g. 06_sweep.py --workers 2.

@@ -1,0 +1,56 @@
+{
+ "note": "Gas species known only from a measured reaction Gibbs energy dG = A + B*T (J/mol) for n_metal M(condensed) + n_cl2 Cl2(g) = species(g). Extrapolated with constant dH and dS outside the measured range. Used only in the 'most_volatile' data set.",
+ "species": [
+  {
+   "name": "Au2Cl2",
+   "composition": {
+    "Au": 2,
+    "Cl": 2
+   },
+   "metal": "Au",
+   "n_metal": 2,
+   "n_cl2": 1,
+   "A_J": 89000.0,
+   "B_J_per_K": -27.8,
+   "T_range_K": [
+    882,
+    1107
+   ],
+   "source": "James & Hager, Metall. Trans. B 9 (1978) 501, doi:10.1007/BF03321888 (flow-reactor mass spectrometry; abstract)"
+  },
+  {
+   "name": "Au2Cl6",
+   "composition": {
+    "Au": 2,
+    "Cl": 6
+   },
+   "metal": "Au",
+   "n_metal": 2,
+   "n_cl2": 3,
+   "A_J": -102000.0,
+   "B_J_per_K": 235.0,
+   "T_range_K": [
+    580,
+    649
+   ],
+   "source": "James & Hager, Metall. Trans. B 9 (1978) 501 (the more stable of this and Hager & Hill, Metall. Trans. 1 (1970) 2723)"
+  },
+  {
+   "name": "PtCl2",
+   "composition": {
+    "Pt": 1,
+    "Cl": 2
+   },
+   "metal": "Pt",
+   "n_metal": 1,
+   "n_cl2": 1,
+   "A_J": 110460.0,
+   "B_J_per_K": -22.59,
+   "T_range_K": [
+    973,
+    1373
+   ],
+   "source": "Schafer & Wosiewitz, Z. anorg. allg. Chem. 415 (1975) 202 (transpiration; dH298=26.4 kcal, dS298=5.4 cal/K; abstract)"
+  }
+ ]
+}

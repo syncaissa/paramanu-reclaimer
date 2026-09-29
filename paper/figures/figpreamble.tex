@@ -1,0 +1,30 @@
+% Shared preamble for standalone figures (same fonts/colours as the paper).
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage[dvipsnames,svgnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes.geometric,decorations.pathreplacing,shadings}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{fillbetween}
+\definecolor{pgrey}{HTML}{EEEEEE}
+\definecolor{ppink}{HTML}{F8D7DA}
+\definecolor{ppeach}{HTML}{FDE5C8}
+\definecolor{porange}{HTML}{FBC78D}
+\definecolor{pgreen}{HTML}{D4F7D4}
+\definecolor{ppurple}{HTML}{EFE3F7}
+\definecolor{pblue}{HTML}{DCE8F7}
+\definecolor{dgreen}{HTML}{2E8B2E}
+\definecolor{dpink}{HTML}{C2185B}
+\definecolor{dorange}{HTML}{E07B00}
+\definecolor{dblue}{HTML}{1F4E9E}
+\definecolor{dpurple}{HTML}{7B3FA0}
+\definecolor{gold}{HTML}{E0A800}
+\tikzset{
+  blk/.style={draw=black!70,rounded corners=2pt,minimum height=0.8cm,minimum width=1.9cm,
+              align=center,font=\sffamily\footnotesize,inner sep=3pt},
+  arr/.style={-{Stealth[length=2.2mm]},thick,black!75},
+  darr/.style={-{Stealth[length=2mm]},dashed,thick},
+  lbl/.style={font=\itshape\scriptsize},
+}

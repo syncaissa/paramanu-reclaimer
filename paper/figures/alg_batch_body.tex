@@ -1,0 +1,18 @@
+\begin{algorithmic}[1]
+\Require Pre-treated, dried residue; condenser temperatures $T_{\mathrm{A}} > T_{\mathrm{B}} > T_{\mathrm{C}} > T_{\mathrm{D1}} > T_{\mathrm{D2}} > T_{\mathrm{E}}$ set for the operating pressure from the simulated bands (Result~3); slider $s$
+\Ensure Band condensates $\{B_k\}$, trap product, fuel gas, glass; no process gas vented
+\State Feed the residue through the argon-purged lock into the sealed train
+\State Raise each parcel to the all-gas state in the hot zone, for at most tens of milliseconds \Comment{Result~5}
+\For{each band $k = \mathrm{A, B, C, D1, D2, E}$}
+  \State Pass the parcel through condenser $k$ held at $T_k$; harvest condensate $B_k$
+  \State Filter the fume leaving stage $k$ and return it to $B_k$
+  \For{each element $i$ in $B_k$}
+    \If{$V_i + s H_i > C_i$} \State send $i$ to purification; store pure or as a stable compound
+    \Else \State send $i$ to vitrification \Comment{future ore}
+    \EndIf
+  \EndFor
+\EndFor
+\State Capture mercury in the sulfur-impregnated carbon trap; separate the water condensate
+\State Compress the remaining gases (CH$_4$, or H$_2$ and CO if quenched; N$_2$) to the fuel line; recycle Ar
+\State Tap the molten mineral residue to vitrification; close every element balance over the outlets \Comment{Result~1}
+\end{algorithmic}

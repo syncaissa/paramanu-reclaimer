@@ -1,0 +1,25 @@
+\documentclass[border=3pt]{standalone}
+\input{figpreamble}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[xbar stacked, width=13.2cm, height=5.6cm, bar width=0.5cm,
+  xmin=0, xmax=750, ytick=data,
+  yticklabels={{$s=0$},{$s=0.25$},{$s=0.5$},{$s=0.75$},{$s=1$}},
+  y dir=reverse, xlabel={kg per wet tonne (dry solids = 750 kg)},
+  legend style={at={(0.5,1.03)},anchor=south,legend columns=5,font=\scriptsize,draw=none},
+  tick label style={font=\footnotesize}, label style={font=\footnotesize},
+  enlarge y limits=0.15, axis x line*=bottom, axis y line*=left]
+\addplot[fill=porange,draw=black!50] coordinates {(209.25,0) (209.25,1) (209.25,2) (209.25,3) (209.25,4)};
+\addlegendentry{Organics to syngas}
+\addplot[fill=pgreen,draw=black!50] coordinates {(337.5,0) (271.875,1) (206.25,2) (140.625,3) (75,4)};
+\addlegendentry{Clean fines to soil}
+\addplot[fill=pblue,draw=black!50] coordinates {(81,0) (81,1) (81,2) (81,3) (81,4)};
+\addlegendentry{Aggregate}
+\addplot[fill=gold!60,draw=black!50] coordinates {(33.696,0) (33.743,1) (33.743,2) (33.900,3) (33.900,4)};
+\addlegendentry{Recovered elements}
+\addplot[fill=ppink,draw=black!50] coordinates {(88.554,0) (154.132,1) (219.757,2) (285.225,3) (350.850,4)};
+\addlegendentry{Vitrified slag}
+\legend{Organics to syngas, Clean fines to soil, Aggregate, Recovered elements, Vitrified slag}
+\end{axis}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,19 @@
+\documentclass[border=3pt]{standalone}
+\input{figpreamble}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[width=13.2cm, height=6cm, xmin=0, xmax=1, ymin=0, ymax=300,
+  xtick={0,0.25,0.5,0.75,1}, xlabel={Slider position $s$ (0 = Commercial, 1 = Nature)},
+  ylabel={US\$ per wet tonne},
+  legend style={at={(0.98,0.5)},anchor=east,font=\scriptsize,draw=black!30},
+  tick label style={font=\footnotesize}, label style={font=\footnotesize},
+  axis x line*=bottom, axis y line*=left, grid=major, grid style={black!10}]
+\addplot[dorange,very thick,mark=square*,mark size=1.6pt] coordinates {(0,51.499) (0.25,45.944) (0.5,42.475) (0.75,36.706) (1,29.769)};
+\addlegendentry{Net operating margin}
+\addplot[dgreen,very thick,mark=triangle*,mark size=2pt] coordinates {(0,113.008) (0.25,227.758) (0.5,227.758) (0.75,230.908) (1,230.908)};
+\addlegendentry{Monetized harm avoided}
+\addplot[dblue,very thick,dashed,mark=*,mark size=1.5pt] coordinates {(0,164.507) (0.25,273.702) (0.5,270.233) (0.75,267.614) (1,260.676)};
+\addlegendentry{Societal value (sum)}
+\end{axis}
+\end{tikzpicture}
+\end{document}

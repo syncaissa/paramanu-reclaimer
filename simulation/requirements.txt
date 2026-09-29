@@ -1,0 +1,12 @@
+# Exact versions used for every published result (Python 3.10). Newer versions
+# can change solver behaviour: with SciPy 1.17 / NumPy 2.4 / pandas 3.0 some
+# sweep feeds stalled that finish in ~20 s with the versions below.
+cantera==3.2.0
+numpy==2.2.6
+scipy==1.15.3
+pandas==2.3.3
+matplotlib==3.10.9
+pytest==9.1.1
+# optional
+# ray[default]>=2.9      # multi-server sweeps (cluster/)
+# cupy-cuda12x>=13       # GPU Saha grids (scripts/05_chamber.py --gpu)

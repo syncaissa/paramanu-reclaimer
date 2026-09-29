@@ -1,0 +1,16 @@
+\begin{algorithmic}[1]
+\Require Slider $s\in[0,1]$; element table $\{c_i, f_i, V_i, H_i, \eta_i, \pi_i\}$; Sherwood constants $K, b$; dry mass $M_{\mathrm{dry}}$
+\Ensure Recovered set $\mathcal{R}(s)$, recovered masses $\{m_i\}$, slag-bound masses $\{r_i\}$
+\State $\mathcal{R} \gets \emptyset$
+\For{each element $i$}
+  \State $c^{\mathrm{eff}}_i \gets \min(1, f_i c_i)$; \quad $C_i \gets K\,(c^{\mathrm{eff}}_i)^{-b}$ \Comment{Sherwood cost, Eq.~2}
+  \If{$\pi_i = \textsc{Immobilize}$}
+    \State $r_i \gets c_i M_{\mathrm{dry}}$ \Comment{policy exclusion: stays in glass}
+  \ElsIf{$\pi_i = \textsc{Always}$ \textbf{or} $V_i + s H_i > C_i$}
+    \State $\mathcal{R} \gets \mathcal{R}\cup\{i\}$; \quad $m_i \gets \eta_i c_i M_{\mathrm{dry}}$; \quad $r_i \gets (1-\eta_i)c_i M_{\mathrm{dry}}$
+  \Else
+    \State $r_i \gets c_i M_{\mathrm{dry}}$ \Comment{below threshold: vitrify}
+  \EndIf
+\EndFor
+\State \Return $\mathcal{R}, \{m_i\}, \{r_i\}$ \Comment{feed to mass/energy balance (Sec.~6)}
+\end{algorithmic}

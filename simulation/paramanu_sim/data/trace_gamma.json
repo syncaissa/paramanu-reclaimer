@@ -1,0 +1,203 @@
+{
+ "note": "Henrian activity coefficients of dilute trace metals in liquid host metals, ln gamma = A/T + B (pure-liquid reference). 'factor' is the multiplicative uncertainty used for brackets. Pairs not listed (all Pt pairs, Pd in Cu, traces in Ni except Mn) default to gamma = 1 (ideal) and are reported as such.",
+ "pairs": [
+  {
+   "solute": "Au",
+   "host": "Fe",
+   "A_K": 8757,
+   "B": -3.54,
+   "factor": 2.0,
+   "confidence": "medium (dilute limit extrapolated from 44-100 at% Au; T extrapolated above 1573 K)",
+   "source": "Nagamori & Kameda, Trans. JIM 9 (1968) 181, doi:10.2320/matertrans1960.9.181, Eq. 6: log gamma_Au(inf) = 1.232, 1.054, 0.880 at 1373, 1473, 1573 K; fitted here"
+  },
+  {
+   "solute": "Au",
+   "host": "Cu",
+   "A_K": -2370,
+   "B": -1.27,
+   "factor": 2.0,
+   "confidence": "low-medium (one graph point, T from partial heat)",
+   "source": "gamma = 0.05 at 1373 K: Yazawa, Itagaki & Azakami, Trans. JIM 16 (1975) 687, Fig. 4 (value of Hultgren et al. 1973); T dependence from the partial heat of mixing -19.7 kJ/mol, Itagaki & Yazawa, Trans. JIM 16 (1975) 679"
+  },
+  {
+   "solute": "Ag",
+   "host": "Cu",
+   "A_K": 1885,
+   "B": -0.254,
+   "factor": 1.3,
+   "confidence": "high",
+   "source": "Hayes, Lukas, Effenberg & Petzow, Z. Metallkd. 77 (1986) 749 (CALPHAD, NIST solder database)"
+  },
+  {
+   "solute": "Ag",
+   "host": "Fe",
+   "A_K": 0,
+   "B": 5.298,
+   "factor": 3.0,
+   "confidence": "low",
+   "source": "gamma = 200 at 1873 K, JSPS Steelmaking Data Sourcebook (1988), seen as transcribed"
+  },
+  {
+   "solute": "Pd",
+   "host": "Fe",
+   "A_K": 1905,
+   "B": -3.368,
+   "factor": 3.0,
+   "confidence": "low (conflicts with measured excess energy)",
+   "source": "Ghosh, Kantner & Olson, J. Phase Equilib. 20 (1999) 295 (CALPHAD, MatCalc copy)"
+  },
+  {
+   "solute": "Sn",
+   "host": "Fe",
+   "A_K": 0,
+   "B": 0.948,
+   "factor": 1.5,
+   "confidence": "medium",
+   "source": "gamma = 2.58 at 1873 K, JSPS Sourcebook (1988); confirmed by Ono & Aboshi, ISIJ Int. 59 (2019)"
+  },
+  {
+   "solute": "Sn",
+   "host": "Cu",
+   "A_K": 0,
+   "B": -2.12,
+   "factor": 1.5,
+   "confidence": "medium",
+   "source": "gamma = 0.12 at 1523 K, Takeda, Ishiwata & Yazawa (1983) Table 1 (measured)"
+  },
+  {
+   "solute": "Cd",
+   "host": "Cu",
+   "A_K": 0,
+   "B": -0.274,
+   "factor": 1.5,
+   "confidence": "low-medium",
+   "source": "gamma = 0.76 at 1373 K, Yazawa et al. (1975) Fig. 4"
+  },
+  {
+   "solute": "Cd",
+   "host": "Fe",
+   "A_K": 0,
+   "B": 4.883,
+   "factor": 5.0,
+   "confidence": "very low (estimate)",
+   "source": "gamma = 132, estimate in Norris (2016, thesis)"
+  },
+  {
+   "solute": "Co",
+   "host": "Fe",
+   "A_K": -841,
+   "B": 0.0,
+   "factor": 1.3,
+   "confidence": "high",
+   "source": "Ohnuma et al., Acta Mater. 50 (2002) 379 (CALPHAD)"
+  },
+  {
+   "solute": "Co",
+   "host": "Cu",
+   "A_K": 4354,
+   "B": -0.605,
+   "factor": 1.3,
+   "confidence": "high",
+   "source": "Kubista & Vrestal, J. Phase Equilib. 21 (2000) 125 (CALPHAD)"
+  },
+  {
+   "solute": "Mn",
+   "host": "Fe",
+   "A_K": -337,
+   "B": 0.059,
+   "factor": 1.3,
+   "confidence": "high",
+   "source": "Huang, Metall. Trans. A 22 (1991) 1911 (CALPHAD)"
+  },
+  {
+   "solute": "Mn",
+   "host": "Cu",
+   "A_K": -1178,
+   "B": -0.676,
+   "factor": 1.3,
+   "confidence": "high",
+   "source": "He et al., J. Alloys Compd. 457 (2008) 233 (CALPHAD)"
+  },
+  {
+   "solute": "Mn",
+   "host": "Ni",
+   "A_K": -6779,
+   "B": 0.541,
+   "factor": 1.5,
+   "confidence": "medium",
+   "source": "Sun et al., CALPHAD 33 (2009) 642"
+  },
+  {
+   "solute": "Sb",
+   "host": "Cu",
+   "A_K": 0,
+   "B": -3.381,
+   "factor": 1.5,
+   "confidence": "medium",
+   "source": "gamma = 0.034 at 1473 K, Liu et al. (2000) via 2010 reprint; Takeda (1983) 0.03"
+  },
+  {
+   "solute": "Sb",
+   "host": "Fe",
+   "A_K": 0,
+   "B": -0.892,
+   "factor": 5.0,
+   "confidence": "very low (estimate)",
+   "source": "gamma = 0.41, estimate in Norris (2016, thesis)"
+  },
+  {
+   "solute": "Bi",
+   "host": "Cu",
+   "A_K": 3019,
+   "B": -1.04,
+   "factor": 1.3,
+   "confidence": "medium-high",
+   "source": "Teppo, Niemela & Taskinen, Thermochim. Acta 173 (1990) 137 (CALPHAD)"
+  },
+  {
+   "solute": "Bi",
+   "host": "Fe",
+   "A_K": 0,
+   "B": 9.375,
+   "factor": 5.0,
+   "confidence": "very low (estimate)",
+   "source": "gamma = 11792, estimate in Norris (2016, thesis)"
+  },
+  {
+   "solute": "In",
+   "host": "Cu",
+   "A_K": 0,
+   "B": -1.347,
+   "factor": 1.5,
+   "confidence": "low-medium",
+   "source": "gamma = 0.26 at 1373 K, Yazawa et al. (1975) Fig. 4"
+  },
+  {
+   "solute": "In",
+   "host": "Fe",
+   "A_K": 0,
+   "B": 3.311,
+   "factor": 5.0,
+   "confidence": "very low (estimate)",
+   "source": "gamma = 27.4, estimate in Norris (2016, thesis)"
+  },
+  {
+   "solute": "Ga",
+   "host": "Cu",
+   "A_K": 0,
+   "B": -3.576,
+   "factor": 1.5,
+   "confidence": "low-medium",
+   "source": "gamma = 0.028 at 1373 K, Yazawa et al. (1975) Fig. 4"
+  },
+  {
+   "solute": "Ga",
+   "host": "Fe",
+   "A_K": 0,
+   "B": -0.511,
+   "factor": 5.0,
+   "confidence": "very low (estimate)",
+   "source": "gamma = 0.60, estimate in Norris (2016, thesis)"
+  }
+ ]
+}

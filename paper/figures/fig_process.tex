@@ -1,0 +1,46 @@
+\documentclass[border=3pt]{standalone}
+\input{figpreamble}
+\begin{document}
+\begin{tikzpicture}
+% control layer
+\node[blk,fill=ppurple,draw=dpurple,minimum width=6.2cm] (slider) at (7.6,3.95)
+  {Commercial $\leftrightarrow$ Nature slider $s\in[0,1]$};
+\node[blk,fill=ppurple,draw=dpurple,dashed,minimum width=3.4cm,font=\sffamily\scriptsize] (crit) at (7.6,3.05)
+  {Recover element $i$ if $V_i + s\,H_i > C_i$};
+\draw[darr,dpurple] (slider) -- (crit);
+% main line
+\node[blk,fill=pgrey] (fill) at (0,0) {Landfill\\excavation};
+\node[blk,fill=ppink] (sort) at (2.55,0) {Pre-sort\\(sensors, magnets)};
+\node[lbl,text=dpink,below=0.05cm of sort] {sensor-based sorting};
+\node[blk,fill=ppeach] (gas)  at (5.4,1.2)  {Plasma\\gasifier};
+\node[blk,fill=ppeach] (ref)  at (5.4,0)    {Pyro / hydro\\refining};
+\node[blk,fill=ppeach] (wash) at (5.4,-1.2) {Wash \&\\screen fines};
+\node[blk,fill=porange] (power) at (8.3,1.2) {Power island\\(H$_2$ fuel cell)};
+\node[blk,fill=porange] (stab) at (8.3,0)  {Metals \& stable\\compounds};
+\node[blk,fill=porange] (vit)  at (10.4,-1.2) {Plasma\\vitrification};
+\node[blk,fill=pgreen,draw=dgreen] (metals) at (12.95,0) {Sold\\products};
+\node[blk,fill=pgreen,draw=dgreen] (soil) at (8.3,-2.45) {Cover soil \&\\aggregate};
+\node[blk,fill=pgreen,draw=dgreen] (slag) at (12.95,-1.2) {Glass slag\\aggregate};
+\node[blk,fill=pblue,draw=dblue] (water) at (12.95,1.2) {Treated water\\(NPDES)};
+% flows
+\draw[arr] (fill) -- (sort);
+\draw[arr] (sort.east) -- ++(0.25,0) |- (gas.west);
+\draw[arr] (sort) -- (ref);
+\draw[arr] (sort.east) -- ++(0.25,0) |- (wash.west);
+\draw[arr] (gas) -- node[below,font=\sffamily\scriptsize]{syngas} (power);
+\draw[arr] (ref) -- (stab);
+\draw[arr] (stab) -- (metals);
+\draw[arr] (power) -- node[pos=0.72,below,font=\sffamily\scriptsize]{H$_2$O} (water);
+\draw[arr] (wash) |- node[pos=0.75,above,font=\sffamily\scriptsize]{clean} (soil);
+\draw[arr] (wash) -- node[pos=0.35,below,font=\sffamily\scriptsize]{contaminated} (vit);
+\draw[arr] (ref.south east) to[out=-25,in=165] node[pos=0.35,above,font=\sffamily\scriptsize]{residue} (vit.north west);
+\draw[arr] (vit) -- (slag);
+% energy loop
+\draw[darr,dgreen] (power.north) -- ++(0,0.5) -| (sort.north);
+\node[font=\sffamily\scriptsize,text=dgreen,above] at (4.1,2.1) {electricity \& heat to plant};
+% control arrows
+\draw[darr,dpurple] (crit.east) -- (9.7,3.05) -- (9.7,0.45);
+\draw[darr,dpurple] (9.7,3.05) -| (vit.north);
+\node[font=\sffamily\scriptsize,text=dpurple,anchor=south west] at (9.75,3.05) {decides what is recovered};
+\end{tikzpicture}
+\end{document}

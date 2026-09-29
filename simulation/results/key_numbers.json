@@ -1,0 +1,2061 @@
+{
+  "alloy[ideal alloy]_Au_band": "B",
+  "alloy[ideal alloy]_Au_share": 0.521052792691401,
+  "alloy[ideal alloy]_Au_share_in_Au_band": 0.521052792691401,
+  "alloy[ideal alloy]_Cd_share_in_Au_band": 4.9901835385786585e-06,
+  "alloy[ideal alloy]_Cu_share_in_Au_band": 0.32529908227523374,
+  "alloy[ideal alloy]_Fe_share_in_Au_band": 0.6808228002688484,
+  "alloy[ideal alloy]_Hg_share_in_Au_band": 7.33246270713272e-08,
+  "alloy[ideal alloy]_Ni_share_in_Au_band": 0.6298963599517973,
+  "alloy[ideal alloy]_Pb_share_in_Au_band": 0.005427090654034534,
+  "alloy[ideal alloy]_Pd_share_in_Au_band": 0.5721176389012718,
+  "alloy[ideal alloy]_Zn_share_in_Au_band": 8.608919953718126e-05,
+  "alloy[pure phases]_Au_band": "B",
+  "alloy[pure phases]_Au_share": 0.5809550460393849,
+  "alloy[pure phases]_Au_share_in_Au_band": 0.5809550460393849,
+  "alloy[pure phases]_Cd_share_in_Au_band": 1.797798248716803e-07,
+  "alloy[pure phases]_Cu_share_in_Au_band": 0.0,
+  "alloy[pure phases]_Fe_share_in_Au_band": 0.9613999226993163,
+  "alloy[pure phases]_Hg_share_in_Au_band": 0.0,
+  "alloy[pure phases]_Ni_share_in_Au_band": 0.0,
+  "alloy[pure phases]_Pb_share_in_Au_band": 0.0,
+  "alloy[pure phases]_Pd_share_in_Au_band": 0.9999999990971387,
+  "alloy[pure phases]_Zn_share_in_Au_band": 0.0,
+  "alloy_all_gas_T_1atm": 2900.0,
+  "band_split_margin": {
+    "boundary_K": 1300.0,
+    "feed_P_atm": 1.403950431807541,
+    "feed_pretreat": 0.1233,
+    "gap_K": 550.0,
+    "gap_T50_K_in_search": 650.0,
+    "gold_999_condensed_by_K": 1562.5,
+    "lead_first_001_condensed_at_K": 1012.5
+  },
+  "benchmark_eaf_dust_1300C": [
+    {
+      "C/O": 0.8,
+      "Fe_metallization_pct": 100.0,
+      "Zn_removal_pct": 100.0,
+      "gas": "sweep-equivalent N2"
+    },
+    {
+      "C/O": 0.8,
+      "Fe_metallization_pct": 100.0,
+      "Zn_removal_pct": 100.0,
+      "gas": "closed, little N2"
+    },
+    {
+      "C/O": 0.5,
+      "Fe_metallization_pct": 53.6,
+      "Zn_removal_pct": 100.0,
+      "gas": "sweep-equivalent N2"
+    },
+    {
+      "C/O": 0.5,
+      "Fe_metallization_pct": 48.5,
+      "Zn_removal_pct": 100.0,
+      "gas": "closed, little N2"
+    },
+    {
+      "C/O": 0.2,
+      "Fe_metallization_pct": 0.0,
+      "Zn_removal_pct": 100.0,
+      "gas": "sweep-equivalent N2"
+    },
+    {
+      "C/O": 0.2,
+      "Fe_metallization_pct": 0.0,
+      "Zn_removal_pct": 100.0,
+      "gas": "closed, little N2"
+    }
+  ],
+  "benchmark_vapor_pressure_ratio_range": {
+    "Pb": [
+      0.9777713137856785,
+      1.0314744124906283
+    ],
+    "Sn": [
+      1.0903313376474597,
+      1.1805940401243105
+    ]
+  },
+  "breakdown_fraction_2890K": {
+    "C10H8": 1.057287934934405e-28,
+    "C12H10": 2.487732372738199e-36,
+    "C2F4": 1.1069073012126327e-42,
+    "C2H5OH": 3.5779313382532747e-19,
+    "C6H5OH": 4.363675378229248e-24,
+    "CCL4": 2.023726266906911e-26,
+    "CF4": 7.683255924073164e-39,
+    "CH3CL": 6.395478896341272e-11,
+    "COCL2": 5.891772520560017e-16,
+    "HCN": 0.0004069217695933577
+  },
+  "breakdown_largest_6atom_fraction_2890K": 1.1787956125189787e-07,
+  "breakdown_max_rel_diff_between_starts": 3.4792830688189774e-09,
+  "carbothermic_sio_T_K": [
+    {
+      "T_silica_alone_K": 2357.0,
+      "T_with_carbon_K": 1498.0,
+      "p_SiO_atm": 0.001
+    },
+    {
+      "T_silica_alone_K": 2874.0,
+      "T_with_carbon_K": 1811.0,
+      "p_SiO_atm": 0.1
+    },
+    {
+      "T_silica_alone_K": 3116.0,
+      "T_with_carbon_K": 1955.0,
+      "p_SiO_atm": 0.5
+    }
+  ],
+  "catalyst_damkohler_CF4": {
+    "2200.0": 1.8278313237669943,
+    "2400.0": 11.540377208783774,
+    "2600.0": 52.925339848580506,
+    "2890.0": 314.2044871335867
+  },
+  "catalyst_lifetime_s_2890K": {
+    "Fe 1 mm pellet": 0.3616986738384055,
+    "Fe 5 nm particle": 1.8084933691920276e-06,
+    "Ni 1 mm pellet": 0.4780792738249419,
+    "Ni 5 nm particle": 2.3903963691247094e-06,
+    "Pd 1 mm pellet": 0.5600368416123926,
+    "Pd 5 nm particle": 2.8001842080619628e-06,
+    "Pt 1 mm pellet": 108.60777033850401,
+    "Pt 5 nm particle": 0.00054303885169252
+  },
+  "chamber_100kg_10atm_radiation_MW": 214.33357615255312,
+  "chamber_100kg_10atm_volume_m3": 127.03601337118054,
+  "chamber_1t_1atm_radiation_MW": 2945.5640774208537,
+  "chamber_1t_1atm_volume_m3": 11693.685429792988,
+  "convergence_change_25K_to_12p5K": {
+    "Au_in_B": 0.009923114229086982,
+    "Fe_in_B": 2.573719015686038e-11,
+    "Hg_gas": 5.114300548614281e-07,
+    "T50_Cu": 12.5,
+    "T50_Fe": 12.5,
+    "T50_Zn": 12.5,
+    "Zn_in_E": 0.0
+  },
+  "design_batch_tau_1t_1atm_s": 4.172422923514518,
+  "design_batch_tau_scaling_exponent": 0.33333333333333326,
+  "design_condenser_duty_MWh_per_t": {
+    "A": 0.3253069708395817,
+    "B": 0.6794633421441707,
+    "C": 0.5255606484734335,
+    "D1": 0.08001820304239056,
+    "D2": 0.2761328503602794,
+    "E": 0.3775098631594545,
+    "cold": 0.12926913307255197
+  },
+  "design_flow_max_residence_s_1000tpd_loss10pct": 0.025118864315095808,
+  "design_flow_max_residence_s_1000tpd_loss5pct": 0.01,
+  "design_flow_max_residence_s_100tpd_loss10pct": 0.007943282347242814,
+  "design_flow_max_residence_s_100tpd_loss5pct": 0.0031622776601683794,
+  "design_flow_max_residence_s_10tpd_loss10pct": 0.0025118864315095794,
+  "design_flow_max_residence_s_10tpd_loss5pct": 0.001,
+  "design_heat_above_2000K_share": 0.41983315163996776,
+  "design_hot_zone_basis": {
+    "T_K": 2888.671875,
+    "e_MJ_per_excavated_kg": 9.790462268414725,
+    "gas_m3_per_s_1000tpd": 96.22928634933812,
+    "gas_mol_per_excavated_kg": 35.07560913159867,
+    "torch_MW_no_loss_1000tpd_excluding_drying": 113.31553551405932
+  },
+  "dilution_argon": [
+    {
+      "Au_in_B": 0.581,
+      "Au_in_C": 0.419,
+      "Hg_left_in_gas": 0.5017,
+      "Pb_in_gold_bands": 0.0,
+      "T50_Au": 2075.0,
+      "T50_Cu": 1700.0,
+      "T50_Fe": 2225.0,
+      "T50_Pb": 1025.0,
+      "T50_Zn": 675.0,
+      "Zn_in_gold_bands": 0.0,
+      "argon_per_heap_gas": 0.0,
+      "gold_bands": "BC"
+    },
+    {
+      "Au_in_B": 0.4996,
+      "Au_in_C": 0.5004,
+      "Hg_left_in_gas": 1.0,
+      "Pb_in_gold_bands": 0.0,
+      "T50_Au": 1975.0,
+      "T50_Cu": 1675.0,
+      "T50_Fe": 2200.0,
+      "T50_Pb": 1000.0,
+      "T50_Zn": 650.0,
+      "Zn_in_gold_bands": 0.0,
+      "argon_per_heap_gas": 0.5,
+      "gold_bands": "BC"
+    },
+    {
+      "Au_in_B": 0.442,
+      "Au_in_C": 0.558,
+      "Hg_left_in_gas": 1.0,
+      "Pb_in_gold_bands": 0.0,
+      "T50_Au": 1925.0,
+      "T50_Cu": 1650.0,
+      "T50_Fe": 2150.0,
+      "T50_Pb": 975.0,
+      "T50_Zn": 650.0,
+      "Zn_in_gold_bands": 0.0,
+      "argon_per_heap_gas": 1.0,
+      "gold_bands": "BC"
+    }
+  ],
+  "energy_MW_per_1000tpd": 120.76330750480007,
+  "energy_MWh_5000K_1atm": 5.4301476649239095,
+  "energy_MWh_all_gas_1atm": 2.8983193801152014,
+  "energy_all_gas_T_1atm": 2888.671875,
+  "energy_table": [
+    {
+      "MWh_at_5000K": 5.966,
+      "MWh_at_all_gas_T": 2.954,
+      "P_atm": 0.1,
+      "all_gas_T": 2629.395,
+      "dry_kg": 750.0,
+      "gas_mol": 36297.866,
+      "pretreat": 0.0
+    },
+    {
+      "MWh_at_5000K": 5.543,
+      "MWh_at_all_gas_T": 2.997,
+      "P_atm": 1.0,
+      "all_gas_T": 2888.672,
+      "dry_kg": 750.0,
+      "gas_mol": 35874.721,
+      "pretreat": 0.0
+    },
+    {
+      "MWh_at_5000K": 5.045,
+      "MWh_at_all_gas_T": 3.042,
+      "P_atm": 10.0,
+      "all_gas_T": 3183.105,
+      "dry_kg": 750.0,
+      "gas_mol": 35303.601,
+      "pretreat": 0.0
+    },
+    {
+      "MWh_at_5000K": 5.854,
+      "MWh_at_all_gas_T": 2.857,
+      "P_atm": 0.1,
+      "all_gas_T": 2629.395,
+      "dry_kg": 711.0,
+      "gas_mol": 35495.306,
+      "pretreat": 0.052
+    },
+    {
+      "MWh_at_5000K": 5.43,
+      "MWh_at_all_gas_T": 2.898,
+      "P_atm": 1.0,
+      "all_gas_T": 2888.672,
+      "dry_kg": 711.0,
+      "gas_mol": 35075.609,
+      "pretreat": 0.052
+    },
+    {
+      "MWh_at_5000K": 4.931,
+      "MWh_at_all_gas_T": 2.946,
+      "P_atm": 10.0,
+      "all_gas_T": 3187.5,
+      "dry_kg": 711.0,
+      "gas_mol": 34532.553,
+      "pretreat": 0.052
+    },
+    {
+      "MWh_at_5000K": 5.347,
+      "MWh_at_all_gas_T": 2.772,
+      "P_atm": 0.1,
+      "all_gas_T": 2704.102,
+      "dry_kg": 637.5,
+      "gas_mol": 34085.813,
+      "pretreat": 0.15
+    },
+    {
+      "MWh_at_5000K": 5.061,
+      "MWh_at_all_gas_T": 2.772,
+      "P_atm": 1.0,
+      "all_gas_T": 2963.379,
+      "dry_kg": 637.5,
+      "gas_mol": 33331.424,
+      "pretreat": 0.15
+    },
+    {
+      "MWh_at_5000K": 4.686,
+      "MWh_at_all_gas_T": 2.793,
+      "P_atm": 10.0,
+      "all_gas_T": 3270.996,
+      "dry_kg": 637.5,
+      "gas_mol": 32552.998,
+      "pretreat": 0.15
+    },
+    {
+      "MWh_at_5000K": 4.859,
+      "MWh_at_all_gas_T": 2.518,
+      "P_atm": 0.1,
+      "all_gas_T": 2809.57,
+      "dry_kg": 525.0,
+      "gas_mol": 30552.131,
+      "pretreat": 0.3
+    },
+    {
+      "MWh_at_5000K": 4.733,
+      "MWh_at_all_gas_T": 2.47,
+      "P_atm": 1.0,
+      "all_gas_T": 3051.27,
+      "dry_kg": 525.0,
+      "gas_mol": 29522.268,
+      "pretreat": 0.3
+    },
+    {
+      "MWh_at_5000K": 4.366,
+      "MWh_at_all_gas_T": 2.46,
+      "P_atm": 10.0,
+      "all_gas_T": 3345.703,
+      "dry_kg": 525.0,
+      "gas_mol": 28591.012,
+      "pretreat": 0.3
+    }
+  ],
+  "falsification": {
+    "cadmium": {
+      "evaluations": 1664,
+      "failed_evaluations": 0,
+      "falsified": false,
+      "pressure_at_worst_atm": 4.728546940787748,
+      "smallest_T50_gap_K": 1000.0,
+      "threshold": 0.001,
+      "worst_share_in_gold_bands": 0.00025394251341810507
+    },
+    "lead": {
+      "evaluations": 1664,
+      "failed_evaluations": 0,
+      "falsified": false,
+      "pressure_at_worst_atm": 3.0329081571387158,
+      "smallest_T50_gap_K": 650.0,
+      "threshold": 0.01,
+      "worst_share_in_gold_bands": 0.0
+    },
+    "mercury": {
+      "evaluations": 1664,
+      "failed_evaluations": 0,
+      "falsified": false,
+      "pressure_at_worst_atm": 1.4833512622959113,
+      "smallest_T50_gap_K": 1350.0,
+      "threshold": 0.01,
+      "worst_share_in_gold_bands": 0.0
+    },
+    "wall_s": 4418.574100971222,
+    "zinc": {
+      "evaluations": 1664,
+      "failed_evaluations": 0,
+      "falsified": false,
+      "pressure_at_worst_atm": 1.4833512622959113,
+      "smallest_T50_gap_K": 700.0,
+      "threshold": 0.01,
+      "worst_share_in_gold_bands": 0.0
+    }
+  },
+  "global_sensitivity_top": {
+    "1 atm: cadmium in gold bands": {
+      "gamma_Cd_in_Cu": 0.013,
+      "mass_nonferrous": 0.017,
+      "mass_plastics": 0.014,
+      "pretreat": 0.687,
+      "sum_all_first_order": 0.83
+    },
+    "1 atm: gold half-condensation T": {
+      "gamma_Au_in_Fe": 0.771,
+      "mass_fines": 0.039,
+      "mass_plastics": 0.037,
+      "pretreat": 0.097,
+      "sum_all_first_order": 1.042
+    },
+    "1 atm: gold in Band B": {
+      "gamma_Au_in_Fe": 0.857,
+      "mass_fines": 0.027,
+      "mass_plastics": 0.019,
+      "pretreat": 0.061,
+      "sum_all_first_order": 1.04
+    },
+    "1 atm: gold in Bands B+C": {
+      "gamma_Au_in_Fe": 0.011,
+      "mass_fines": 0.087,
+      "mass_plastics": 0.072,
+      "pretreat": 0.038,
+      "sum_all_first_order": 0.279
+    },
+    "1 atm: mercury left in gas": {
+      "hg_ppm": 0.648,
+      "mass_fines": 0.062,
+      "mass_plastics": 0.167,
+      "pretreat": 0.011,
+      "sum_all_first_order": 0.95
+    },
+    "all: cadmium in gold bands": {
+      "gamma_Au_in_Fe": 0.023,
+      "mass_plastics": 0.014,
+      "pressure": 0.187,
+      "pretreat": 0.332,
+      "sum_all_first_order": 0.608
+    },
+    "all: gold half-condensation T": {
+      "gamma_Au_in_Fe": 0.119,
+      "mass_fines": 0.009,
+      "pressure": 0.841,
+      "pretreat": 0.019,
+      "sum_all_first_order": 1.022
+    },
+    "all: gold in Band B": {
+      "gamma_Au_in_Fe": 0.114,
+      "mass_fines": 0.007,
+      "pressure": 0.827,
+      "pretreat": 0.003,
+      "sum_all_first_order": 0.978
+    },
+    "all: gold in Bands B+C": {
+      "gamma_Au_in_Fe": 0.023,
+      "pressure": 0.578,
+      "pretreat": 0.02,
+      "sum_all_first_order": 0.662,
+      "trace_Ag": 0.006
+    },
+    "all: mercury left in gas": {
+      "hg_ppm": 0.077,
+      "mass_fines": 0.013,
+      "mass_plastics": 0.024,
+      "pressure": 0.779,
+      "sum_all_first_order": 0.92
+    }
+  },
+  "gold_copper_benchmark": [
+    {
+      "L_FeCu_measured_FeCuP": 0.013,
+      "L_FeCu_measured_FeCuPC": 0.0071,
+      "L_FeCu_predicted": 0.003329385801538676,
+      "element": "Au",
+      "gamma_in_Cu": 0.04997926182520163,
+      "gamma_in_Fe": 17.081642861284827,
+      "predicted_over_measured": [
+        0.2561066001183597,
+        0.4689275776815036
+      ]
+    },
+    {
+      "L_FeCu_measured_FeCuP": 0.0027,
+      "L_FeCu_measured_FeCuPC": 0.0027,
+      "L_FeCu_predicted": 0.017423944505431076,
+      "element": "Ag",
+      "gamma_in_Cu": 3.06150322443693,
+      "gamma_in_Fe": 199.93653676147983,
+      "predicted_over_measured": [
+        6.453312779789287,
+        6.453312779789287
+      ]
+    }
+  ],
+  "gold_copper_ladder": [
+    {
+      "band_A": 0.0,
+      "band_B": 0.762,
+      "band_C": 0.238,
+      "main_band": "B",
+      "scenario": "ideal (gamma = 1)"
+    },
+    {
+      "band_A": 0.0,
+      "band_B": 0.581,
+      "band_C": 0.419,
+      "main_band": "B",
+      "scenario": "measured"
+    },
+    {
+      "band_A": 0.0,
+      "band_B": 0.357,
+      "band_C": 0.643,
+      "main_band": "C",
+      "scenario": "measured, against iron"
+    },
+    {
+      "band_A": 0.0,
+      "band_B": 0.815,
+      "band_C": 0.185,
+      "main_band": "B",
+      "scenario": "measured, toward iron"
+    },
+    {
+      "band_A": 0.0,
+      "band_B": 0.154,
+      "band_C": 0.589,
+      "main_band": "C",
+      "scenario": "measured, 0.1 atm"
+    },
+    {
+      "band_A": 0.0,
+      "band_B": 0.836,
+      "band_C": 0.164,
+      "main_band": "B",
+      "scenario": "measured, 5 atm"
+    }
+  ],
+  "heat_recovery": {
+    "emissivity": [
+      {
+        "emissivity": 0.3,
+        "loss_at_25ms": 0.0906,
+        "residence_ms_for_10pct": 28.9952,
+        "wall_flux_MW_m2": 1.1823
+      },
+      {
+        "emissivity": 0.6,
+        "loss_at_25ms": 0.1812,
+        "residence_ms_for_10pct": 10.2513,
+        "wall_flux_MW_m2": 2.3645
+      },
+      {
+        "emissivity": 1.0,
+        "loss_at_25ms": 0.302,
+        "residence_ms_for_10pct": 4.7644,
+        "wall_flux_MW_m2": 3.9409
+      }
+    ],
+    "grinding_kWh_per_t": 29.3,
+    "grinding_share_of_gross": 0.0101,
+    "modules": [
+      {
+        "emissivity": 0.3,
+        "modules": 1,
+        "residence_ms_for_10pct": 28.995,
+        "t_per_day_each": 1000.0,
+        "torch_MW_each_demonstrated": 260.626,
+        "torch_MW_each_gross": 113.316
+      },
+      {
+        "emissivity": 1.0,
+        "modules": 1,
+        "residence_ms_for_10pct": 4.764,
+        "t_per_day_each": 1000.0,
+        "torch_MW_each_demonstrated": 260.626,
+        "torch_MW_each_gross": 113.316
+      },
+      {
+        "emissivity": 0.3,
+        "modules": 2,
+        "residence_ms_for_10pct": 20.503,
+        "t_per_day_each": 500.0,
+        "torch_MW_each_demonstrated": 130.313,
+        "torch_MW_each_gross": 56.658
+      },
+      {
+        "emissivity": 1.0,
+        "modules": 2,
+        "residence_ms_for_10pct": 3.369,
+        "t_per_day_each": 500.0,
+        "torch_MW_each_demonstrated": 130.313,
+        "torch_MW_each_gross": 56.658
+      },
+      {
+        "emissivity": 0.3,
+        "modules": 4,
+        "residence_ms_for_10pct": 14.498,
+        "t_per_day_each": 250.0,
+        "torch_MW_each_demonstrated": 65.156,
+        "torch_MW_each_gross": 28.329
+      },
+      {
+        "emissivity": 1.0,
+        "modules": 4,
+        "residence_ms_for_10pct": 2.382,
+        "t_per_day_each": 250.0,
+        "torch_MW_each_demonstrated": 65.156,
+        "torch_MW_each_gross": 28.329
+      },
+      {
+        "emissivity": 0.3,
+        "modules": 10,
+        "residence_ms_for_10pct": 9.169,
+        "t_per_day_each": 100.0,
+        "torch_MW_each_demonstrated": 26.063,
+        "torch_MW_each_gross": 11.332
+      },
+      {
+        "emissivity": 1.0,
+        "modules": 10,
+        "residence_ms_for_10pct": 1.507,
+        "t_per_day_each": 100.0,
+        "torch_MW_each_demonstrated": 26.063,
+        "torch_MW_each_gross": 11.332
+      }
+    ],
+    "self_sufficiency": [
+      {
+        "MWh_needed": 2.8983,
+        "MWh_own": 0.5335,
+        "MWh_to_buy": 2.3648,
+        "break_even_c_per_kWh": 4.7953,
+        "coverage_at_0.05": 0.9666,
+        "energy_case": "gross enthalpy",
+        "own_power": "low"
+      },
+      {
+        "MWh_needed": 2.8983,
+        "MWh_own": 1.1547,
+        "MWh_to_buy": 1.7436,
+        "break_even_c_per_kWh": 6.5036,
+        "coverage_at_0.05": 1.1809,
+        "energy_case": "gross enthalpy",
+        "own_power": "high"
+      },
+      {
+        "MWh_needed": 6.6661,
+        "MWh_own": 0.5335,
+        "MWh_to_buy": 6.1326,
+        "break_even_c_per_kWh": 1.8491,
+        "coverage_at_0.05": 0.4203,
+        "energy_case": "best demonstrated",
+        "own_power": "low"
+      },
+      {
+        "MWh_needed": 6.6661,
+        "MWh_own": 1.1547,
+        "MWh_to_buy": 5.5115,
+        "break_even_c_per_kWh": 2.0575,
+        "coverage_at_0.05": 0.5134,
+        "energy_case": "best demonstrated",
+        "own_power": "high"
+      }
+    ],
+    "stage_heat_MWh_per_t": 2.264,
+    "steam_MW_1000tpd": [
+      17.0,
+      23.1
+    ],
+    "steam_electricity_MWh_per_t": [
+      0.408,
+      0.555
+    ],
+    "steam_share_of_gross": [
+      0.141,
+      0.191
+    ]
+  },
+  "ladder_Au_band": "B",
+  "ladder_Au_band_ppm": 1.4735439104446908,
+  "ladder_Au_enrichment": 2.9470878208893816,
+  "ladder_Au_enrichment_in_metal": 27.898126983761692,
+  "ladder_Au_feed_ppm": 0.5,
+  "ladder_Au_ppm_in_band_metal": 13.949063491880846,
+  "ladder_Au_share_in_band": 0.5809550460393849,
+  "ladder_Cd_left_in_gas": 1.4473195829791246e-09,
+  "ladder_Cd_share_in_Au_band": 1.7977982487168034e-07,
+  "ladder_Hg_left_in_gas": 0.5016825449441986,
+  "ladder_Hg_share_in_Au_band": 0.0,
+  "ladder_Pb_left_in_gas": 0.0,
+  "ladder_Pb_share_in_Au_band": 0.0,
+  "ladder_T50_K": {
+    "Ag": 1175.0,
+    "Al": 2200.0,
+    "Au": 2075.0,
+    "Bi": 1025.0,
+    "C": 925.0,
+    "Ca": 2100.0,
+    "Cd": 475.0,
+    "Cl": 1125.0,
+    "Co": 2275.0,
+    "Cr": 1650.0,
+    "Cu": 1700.0,
+    "F": 975.0,
+    "Fe": 2225.0,
+    "Ga": 1675.0,
+    "H": 350.0,
+    "Hg": null,
+    "In": 650.0,
+    "K": 1125.0,
+    "Li": 850.0,
+    "Mg": 1950.0,
+    "Mn": 1375.0,
+    "N": null,
+    "Na": 1225.0,
+    "Nd": 2350.0,
+    "Ni": 1850.0,
+    "O": 350.0,
+    "P": 400.0,
+    "Pb": 1025.0,
+    "Pd": 2300.0,
+    "Pt": 2325.0,
+    "S": 1500.0,
+    "Sb": 1675.0,
+    "Si": 1925.0,
+    "Sn": 1725.0,
+    "Ti": 2825.0,
+    "W": 3000.0,
+    "Zn": 675.0
+  },
+  "ladder_Zn_left_in_gas": 0.0,
+  "ladder_Zn_share_in_Au_band": 0.0,
+  "ladder_band_mass_kg": {
+    "A": 20.739149860467176,
+    "B": 140.15837424530798,
+    "C": 171.5152674211493,
+    "D1": 4.129272171105145,
+    "D2": 85.82814366948533,
+    "E": 61.805297167234535,
+    "cold": 208.10426884220473,
+    "gas": 19.435314591741037
+  },
+  "ladder_band_metal_kg": {
+    "A": 12.138159287718459,
+    "B": 14.805977403946407,
+    "C": 1.273031813416981,
+    "D1": 0.06363980121292859,
+    "D2": 0.2411939020657436,
+    "E": 0.4556223833031538,
+    "cold": 0.0007086074210893495
+  },
+  "ladder_first_condensation_K": 2875.0,
+  "landfill_inventory": {
+    "elements": [
+      {
+        "captured": 1.0,
+        "element": "O",
+        "form": "in oxides, water",
+        "kg_per_t": 498.8238,
+        "practical_lb": 2529349048.4651,
+        "refining_yield": 1.0,
+        "stream": "all",
+        "theoretical_lb": 2529349048.4651
+      },
+      {
+        "captured": 0.5816,
+        "element": "C",
+        "form": "fuel gas, carbon",
+        "kg_per_t": 167.4648,
+        "practical_lb": 493905050.1693,
+        "refining_yield": 1.0,
+        "stream": "cold+gas+E",
+        "theoretical_lb": 849151477.8212
+      },
+      {
+        "captured": 0.9976,
+        "element": "Si",
+        "form": "silica/glass",
+        "kg_per_t": 135.8193,
+        "practical_lb": 687052666.3119,
+        "refining_yield": 1.0,
+        "stream": "ABC",
+        "theoretical_lb": 688689064.77
+      },
+      {
+        "captured": 1.0,
+        "element": "H",
+        "form": "water, fuel gas",
+        "kg_per_t": 52.9487,
+        "practical_lb": 268482836.5868,
+        "refining_yield": 1.0,
+        "stream": "cold+gas",
+        "theoretical_lb": 268482880.0604
+      },
+      {
+        "captured": 0.9867,
+        "element": "Fe",
+        "form": "metal",
+        "kg_per_t": 44.5004,
+        "practical_lb": 195936273.5577,
+        "refining_yield": 0.88,
+        "stream": "B",
+        "theoretical_lb": 225645064.755
+      },
+      {
+        "captured": 0.9983,
+        "element": "Al",
+        "form": "oxide",
+        "kg_per_t": 33.5921,
+        "practical_lb": 170038247.2035,
+        "refining_yield": 1.0,
+        "stream": "B",
+        "theoretical_lb": 170333097.7646
+      },
+      {
+        "captured": 0.9972,
+        "element": "Na",
+        "form": "NaCl",
+        "kg_per_t": 17.9134,
+        "practical_lb": 90581529.3781,
+        "refining_yield": 1.0,
+        "stream": "D",
+        "theoretical_lb": 90832225.308
+      },
+      {
+        "captured": 0.9238,
+        "element": "Ca",
+        "form": "oxide",
+        "kg_per_t": 15.8449,
+        "practical_lb": 74219319.8447,
+        "refining_yield": 1.0,
+        "stream": "B",
+        "theoretical_lb": 80343494.708
+      },
+      {
+        "captured": 0.9664,
+        "element": "Cl",
+        "form": "salts",
+        "kg_per_t": 8.215,
+        "practical_lb": 40257144.8019,
+        "refining_yield": 1.0,
+        "stream": "D",
+        "theoretical_lb": 41655235.6683
+      },
+      {
+        "captured": 0.9767,
+        "element": "K",
+        "form": "KCl",
+        "kg_per_t": 7.8613,
+        "practical_lb": 38931158.882,
+        "refining_yield": 1.0,
+        "stream": "D",
+        "theoretical_lb": 39861712.9438
+      },
+      {
+        "captured": 0.9837,
+        "element": "Mg",
+        "form": "oxide",
+        "kg_per_t": 7.229,
+        "practical_lb": 36056998.8785,
+        "refining_yield": 1.0,
+        "stream": "C",
+        "theoretical_lb": 36655305.1937
+      },
+      {
+        "captured": 0.9783,
+        "element": "Cu",
+        "form": "metal",
+        "kg_per_t": 2.8809,
+        "practical_lb": 12004581.4476,
+        "refining_yield": 0.84,
+        "stream": "C",
+        "theoretical_lb": 14608156.5919
+      },
+      {
+        "captured": 0.9745,
+        "element": "Ti",
+        "form": "TiC/oxide",
+        "kg_per_t": 1.2973,
+        "practical_lb": 5448796.3087,
+        "refining_yield": 0.85,
+        "stream": "A",
+        "theoretical_lb": 6578106.887
+      },
+      {
+        "captured": 1.0,
+        "element": "Zn",
+        "form": "metal",
+        "kg_per_t": 1.2959,
+        "practical_lb": 6045392.856,
+        "refining_yield": 0.92,
+        "stream": "E",
+        "theoretical_lb": 6571079.1913
+      },
+      {
+        "captured": 0.9987,
+        "element": "N",
+        "form": "N2",
+        "kg_per_t": 1.2035,
+        "practical_lb": 6094600.5866,
+        "refining_yield": 1.0,
+        "stream": "gas",
+        "theoretical_lb": 6102634.534
+      },
+      {
+        "captured": 0.9997,
+        "element": "S",
+        "form": "sulfate/sulfur",
+        "kg_per_t": 1.0995,
+        "practical_lb": 5573378.6516,
+        "refining_yield": 1.0,
+        "stream": "CD",
+        "theoretical_lb": 5575182.7869
+      },
+      {
+        "captured": 0.9131,
+        "element": "Pb",
+        "form": "metal",
+        "kg_per_t": 0.7572,
+        "practical_lb": 2980101.3878,
+        "refining_yield": 0.85,
+        "stream": "D",
+        "theoretical_lb": 3839579.2941
+      },
+      {
+        "captured": 0.9922,
+        "element": "Cr",
+        "form": "metal",
+        "kg_per_t": 0.6304,
+        "practical_lb": 2695694.92,
+        "refining_yield": 0.85,
+        "stream": "C",
+        "theoretical_lb": 3196396.8781
+      },
+      {
+        "captured": 0.6748,
+        "element": "Mn",
+        "form": "oxide",
+        "kg_per_t": 0.525,
+        "practical_lb": 1526997.6922,
+        "refining_yield": 0.85,
+        "stream": "D",
+        "theoretical_lb": 2662078.65
+      },
+      {
+        "captured": 0.9983,
+        "element": "Ni",
+        "form": "metal",
+        "kg_per_t": 0.3899,
+        "practical_lb": 1677696.7348,
+        "refining_yield": 0.85,
+        "stream": "BC",
+        "theoretical_lb": 1977065.2175
+      },
+      {
+        "captured": 0.8814,
+        "element": "P",
+        "form": "phosphate",
+        "kg_per_t": 0.2214,
+        "practical_lb": 989459.2462,
+        "refining_yield": 1.0,
+        "stream": "E",
+        "theoretical_lb": 1122653.6879
+      },
+      {
+        "captured": 0.9958,
+        "element": "Sn",
+        "form": "metal",
+        "kg_per_t": 0.15,
+        "practical_lb": 643787.8555,
+        "refining_yield": 0.85,
+        "stream": "BC",
+        "theoretical_lb": 760593.9
+      },
+      {
+        "captured": 0.9259,
+        "element": "Sb",
+        "form": "metal",
+        "kg_per_t": 0.0225,
+        "practical_lb": 89785.8076,
+        "refining_yield": 0.85,
+        "stream": "BC",
+        "theoretical_lb": 114089.085
+      },
+      {
+        "captured": 0.966,
+        "element": "Nd",
+        "form": "oxide",
+        "kg_per_t": 0.015,
+        "practical_lb": 62455.511,
+        "refining_yield": 0.85,
+        "stream": "AB",
+        "theoretical_lb": 76059.39
+      },
+      {
+        "captured": 1.0,
+        "element": "Co",
+        "form": "metal",
+        "kg_per_t": 0.0112,
+        "practical_lb": 48486.6725,
+        "refining_yield": 0.85,
+        "stream": "B",
+        "theoretical_lb": 57044.5425
+      },
+      {
+        "captured": 0.8959,
+        "element": "Ga",
+        "form": "metal",
+        "kg_per_t": 0.0112,
+        "practical_lb": 43439.1724,
+        "refining_yield": 0.85,
+        "stream": "BC",
+        "theoretical_lb": 57044.5425
+      },
+      {
+        "captured": 0.88,
+        "element": "Ag",
+        "form": "metal",
+        "kg_per_t": 0.0075,
+        "practical_lb": 31791.5589,
+        "refining_yield": 0.95,
+        "stream": "D",
+        "theoretical_lb": 38029.695
+      },
+      {
+        "captured": 0.922,
+        "element": "Li",
+        "form": "Li2CO3",
+        "kg_per_t": 0.0075,
+        "practical_lb": 35065.2173,
+        "refining_yield": 1.0,
+        "stream": "E",
+        "theoretical_lb": 38029.695
+      },
+      {
+        "captured": 0.9969,
+        "element": "Bi",
+        "form": "metal",
+        "kg_per_t": 0.0038,
+        "practical_lb": 16113.0331,
+        "refining_yield": 0.85,
+        "stream": "D",
+        "theoretical_lb": 19014.8475
+      },
+      {
+        "captured": 0.8959,
+        "element": "Cd",
+        "form": "CdS",
+        "kg_per_t": 0.0038,
+        "practical_lb": 14479.854,
+        "refining_yield": 0.85,
+        "stream": "E",
+        "theoretical_lb": 19014.8475
+      },
+      {
+        "captured": 0.9838,
+        "element": "F",
+        "form": "CaF2",
+        "kg_per_t": 0.0036,
+        "practical_lb": 18207.2752,
+        "refining_yield": 1.0,
+        "stream": "DE",
+        "theoretical_lb": 18507.7784
+      },
+      {
+        "captured": 0.9973,
+        "element": "W",
+        "form": "WC/oxide",
+        "kg_per_t": 0.0015,
+        "practical_lb": 6447.4085,
+        "refining_yield": 0.85,
+        "stream": "A",
+        "theoretical_lb": 7605.939
+      },
+      {
+        "captured": 1.0,
+        "element": "Hg",
+        "form": "HgS (trap)",
+        "kg_per_t": 0.0015,
+        "practical_lb": 7605.939,
+        "refining_yield": 1.0,
+        "stream": "cold+gas",
+        "theoretical_lb": 7605.939
+      },
+      {
+        "captured": 0.8729,
+        "element": "In",
+        "form": "metal",
+        "kg_per_t": 0.0008,
+        "practical_lb": 2821.796,
+        "refining_yield": 0.85,
+        "stream": "DE",
+        "theoretical_lb": 3802.9695
+      },
+      {
+        "captured": 1.0,
+        "element": "Au",
+        "form": "metal",
+        "kg_per_t": 0.0004,
+        "practical_lb": 1806.4105,
+        "refining_yield": 0.95,
+        "stream": "BC",
+        "theoretical_lb": 1901.4848
+      },
+      {
+        "captured": 1.0,
+        "element": "Pd",
+        "form": "metal",
+        "kg_per_t": 0.0001,
+        "practical_lb": 722.5642,
+        "refining_yield": 0.95,
+        "stream": "B",
+        "theoretical_lb": 760.5939
+      },
+      {
+        "captured": 1.0,
+        "element": "Pt",
+        "form": "metal",
+        "kg_per_t": 0.0,
+        "practical_lb": 180.6411,
+        "refining_yield": 0.95,
+        "stream": "B",
+        "theoretical_lb": 190.1485
+      }
+    ],
+    "landfill_t": 2300000
+  },
+  "particle_max_diameter_um_T3500": {
+    "10ms": 27.417221375298446,
+    "25ms": 43.350433329498614
+  },
+  "particle_max_diameter_um_T5000": {
+    "10ms": 52.290093322711975,
+    "25ms": 82.6778969812659
+  },
+  "particle_max_diameter_um_T8000": {
+    "10ms": 141.7205916347994,
+    "25ms": 224.07993045628595
+  },
+  "reductant_Fe_metal_share": {
+    "0.0": 0.42626367411317734,
+    "0.5": 1.0,
+    "1.0": 1.0,
+    "2.0": 1.0
+  },
+  "reductant_ratio_default": 1.5218393961041368,
+  "reproducibility": {
+    "feeds_checked": 20,
+    "max_abs_diff": 1.1368683772161603e-13,
+    "metrics_compared": 108,
+    "same_main_bands": true,
+    "worst_metric": "dry_kg"
+  },
+  "saha_backend": "numpy-cpu",
+  "saha_ionization_10000K_1atm": 0.11489957033402032,
+  "saha_ionization_3000K_1atm": 0.00017190069967080914,
+  "saha_ionization_5000K_1atm": 0.007810302905447447,
+  "saha_ionization_8000K_1atm": 0.0538011474602795,
+  "self_sufficiency": {
+    "cases": [
+      {
+        "MWh_from_own_fuel": 0.1264,
+        "MWh_needed": 2.8983,
+        "MWh_to_buy": 2.7719,
+        "break_even_price_per_kWh": 0.0409,
+        "cost_at_0.05": 138.5965,
+        "cost_at_0.10": 277.193,
+        "energy_case": "gross enthalpy",
+        "fuel_case": "equilibrium",
+        "fuel_share": 0.0436,
+        "own_fuel_plus_sales_share_at_0.05": 0.8261,
+        "sales_share_at_0.05": 0.8182,
+        "sales_share_at_0.10": 0.4091
+      },
+      {
+        "MWh_from_own_fuel": 0.6,
+        "MWh_needed": 2.8983,
+        "MWh_to_buy": 2.2983,
+        "break_even_price_per_kWh": 0.0493,
+        "cost_at_0.05": 114.916,
+        "cost_at_0.10": 229.8319,
+        "energy_case": "gross enthalpy",
+        "fuel_case": "quenched",
+        "fuel_share": 0.207,
+        "own_fuel_plus_sales_share_at_0.05": 0.9895,
+        "sales_share_at_0.05": 0.9868,
+        "sales_share_at_0.10": 0.4934
+      },
+      {
+        "MWh_from_own_fuel": 0.1264,
+        "MWh_needed": 6.6661,
+        "MWh_to_buy": 6.5397,
+        "break_even_price_per_kWh": 0.0173,
+        "cost_at_0.05": 326.9873,
+        "cost_at_0.10": 653.9746,
+        "energy_case": "best demonstrated",
+        "fuel_case": "equilibrium",
+        "fuel_share": 0.019,
+        "own_fuel_plus_sales_share_at_0.05": 0.3592,
+        "sales_share_at_0.05": 0.3468,
+        "sales_share_at_0.10": 0.1734
+      },
+      {
+        "MWh_from_own_fuel": 0.6,
+        "MWh_needed": 6.6661,
+        "MWh_to_buy": 6.0661,
+        "break_even_price_per_kWh": 0.0187,
+        "cost_at_0.05": 303.3067,
+        "cost_at_0.10": 606.6135,
+        "energy_case": "best demonstrated",
+        "fuel_case": "quenched",
+        "fuel_share": 0.09,
+        "own_fuel_plus_sales_share_at_0.05": 0.4302,
+        "sales_share_at_0.05": 0.3739,
+        "sales_share_at_0.10": 0.1869
+      }
+    ],
+    "gross_MWh": 2.898,
+    "revenue_per_t": 113.4,
+    "top_revenue": {
+      "Ag": 7.5,
+      "Au": 39.2,
+      "Cr": 7.8,
+      "Cu": 21.3,
+      "Fe": 11.6,
+      "Ni": 5.3
+    }
+  },
+  "sensitivity_base": {
+    "Au_main_band_share": 0.6003073388303714,
+    "Hg_left_in_gas": 0.5062926172537233,
+    "MWh_per_t": 2.8983193801152014,
+    "all_gas_T": 2888.671875
+  },
+  "silica_heat_and_vaporize_MJ_per_kg": {
+    "heat": 3.441017322810526,
+    "vaporize": 12.394826140099822
+  },
+  "sweep_24_claims": {
+    "Ag_band_counts": {
+      "D": 24
+    },
+    "Au_B_vs_gamma_ratio_corr": -0.48407702136730923,
+    "Au_band_counts": {
+      "A": 1,
+      "B": 14,
+      "C": 5,
+      "D": 4
+    },
+    "Au_in_B_by_trace_data": {
+      "central": 0.6876818392577443,
+      "least_volatile": 0.5795977479110974,
+      "most_volatile": 0.588604363555943
+    },
+    "Au_minus_Fe_T50_K": {
+      "median": -150.0,
+      "p05": -450.0,
+      "p95": 0.0,
+      "within_250K": 0.6666666666666666,
+      "within_400K": 0.875
+    },
+    "Au_share_in_A": {
+      "median": 0.0,
+      "p05": 0.0,
+      "p95": 0.35731935798077796
+    },
+    "Au_share_in_B": {
+      "median": 0.5861829595431642,
+      "p05": 0.08792547811024813,
+      "p95": 0.9893225404748033
+    },
+    "Au_share_in_C": {
+      "median": 0.28712471730176137,
+      "p05": 0.00011033757019278592,
+      "p95": 0.5583753791269536
+    },
+    "Au_share_in_D": {
+      "median": 6.276886035857211e-05,
+      "p05": 3.860292614733263e-18,
+      "p95": 0.5316736487582683
+    },
+    "Cd_in_Au_band": {
+      "feeds_containing": 24,
+      "feeds_with_any": 24,
+      "max": 4.4099577754339344e-05,
+      "median": 5.286762633072719e-07,
+      "p95": 3.261766841759473e-05,
+      "rate_bound_95": null
+    },
+    "Cd_in_gold_bands": {
+      "feeds_containing": 24,
+      "feeds_with_any": 24,
+      "max": 4.726325511784947e-05,
+      "median": 1.5953737656192972e-06,
+      "rate_bound_95": null
+    },
+    "Hg_in_Au_band": {
+      "feeds_containing": 24,
+      "feeds_with_any": 0,
+      "max": 0.0,
+      "median": 0.0,
+      "p95": 0.0,
+      "rate_bound_95": 0.125
+    },
+    "Hg_in_gold_bands": {
+      "feeds_containing": 24,
+      "feeds_with_any": 0,
+      "max": 0.0,
+      "median": 0.0,
+      "rate_bound_95": 0.125
+    },
+    "Pb_in_Au_band": {
+      "feeds_containing": 24,
+      "feeds_with_any": 0,
+      "max": 0.0,
+      "median": 0.0,
+      "p95": 0.0,
+      "rate_bound_95": 0.125
+    },
+    "Pb_in_gold_bands": {
+      "feeds_containing": 24,
+      "feeds_with_any": 0,
+      "max": 0.0,
+      "median": 0.0,
+      "rate_bound_95": 0.125
+    },
+    "Pd_band_counts": {
+      "A": 2,
+      "B": 22
+    },
+    "Pt_band_counts": {
+      "A": 2,
+      "B": 22
+    },
+    "Zn_in_Au_band": {
+      "feeds_containing": 24,
+      "feeds_with_any": 0,
+      "max": 0.0,
+      "median": 0.0,
+      "p95": 0.0,
+      "rate_bound_95": 0.125
+    },
+    "Zn_in_gold_bands": {
+      "feeds_containing": 24,
+      "feeds_with_any": 0,
+      "max": 0.0,
+      "median": 0.0,
+      "rate_bound_95": 0.125
+    },
+    "by_pressure": [
+      {
+        "Au_band_A": 0.0,
+        "Au_band_B": 0.0,
+        "Au_band_C": 0.2,
+        "Au_band_D": 0.8,
+        "Au_in_BC_median": 0.4716796758429937,
+        "Au_in_BC_p05": 0.415767430769845,
+        "Au_in_B_median": 0.1051003102049709,
+        "Au_in_C_median": 0.3717708009087452,
+        "Au_same_band_as_Fe": 0.0,
+        "Cd_in_Au_band_max": 6.844219458279996e-07,
+        "Hg_gas_median": 1.0,
+        "Hg_gas_p05": 1.0,
+        "Hg_gas_p95": 1.0,
+        "P_atm": 0.1,
+        "T50_Au_median": 1550.0,
+        "T50_Fe_median": 2000.0,
+        "feeds": 5,
+        "share_Au_median": 0.528320324157006
+      },
+      {
+        "Au_band_A": 0.0,
+        "Au_band_B": 0.6,
+        "Au_band_C": 0.4,
+        "Au_band_D": 0.0,
+        "Au_in_BC_median": 0.9984255229936796,
+        "Au_in_BC_p05": 0.9083077396487196,
+        "Au_in_B_median": 0.5670148600278705,
+        "Au_in_C_median": 0.4318492727929484,
+        "Au_same_band_as_Fe": 0.6,
+        "Cd_in_Au_band_max": 2.473505429998968e-06,
+        "Hg_gas_median": 0.7240397115399702,
+        "Hg_gas_p05": 0.2672812804739516,
+        "Hg_gas_p95": 1.0,
+        "P_atm": 1.0,
+        "T50_Au_median": 2050.0,
+        "T50_Fe_median": 2225.0,
+        "feeds": 10,
+        "share_Au_median": 0.5760950771488702
+      },
+      {
+        "Au_band_A": 0.1111111111111111,
+        "Au_band_B": 0.8888888888888888,
+        "Au_band_C": 0.0,
+        "Au_band_D": 0.0,
+        "Au_in_BC_median": 0.9999999993884169,
+        "Au_in_BC_p05": 0.4923849973353175,
+        "Au_in_B_median": 0.9328591436782776,
+        "Au_in_C_median": 0.0509708498005633,
+        "Au_same_band_as_Fe": 0.8888888888888888,
+        "Cd_in_Au_band_max": 4.4099577754339344e-05,
+        "Hg_gas_median": 0.0717673452929059,
+        "Hg_gas_p05": 0.032890918667648844,
+        "Hg_gas_p95": 0.14915534202370592,
+        "P_atm": 5.0,
+        "T50_Au_median": 2400.0,
+        "T50_Fe_median": 2450.0,
+        "feeds": 9,
+        "share_Au_median": 0.9328591436782776
+      }
+    ],
+    "samples": 24,
+    "share_Au": {
+      "median": 0.5949962648660628,
+      "p05": 0.5136695229030124,
+      "p95": 0.9893225404748033
+    }
+  },
+  "sweep_5000_claims": {
+    "Ag_band_counts": {
+      "D1": 182,
+      "D2": 4818
+    },
+    "Au_B_vs_gamma_ratio_corr": -0.2261588944965613,
+    "Au_band_counts": {
+      "A": 20,
+      "B": 2883,
+      "C": 1419,
+      "D1": 678
+    },
+    "Au_in_B_by_trace_data": {
+      "central": 0.5837407814093347,
+      "least_volatile": 0.6083951585365565,
+      "most_volatile": 0.6113070698080741
+    },
+    "Au_minus_Fe_T50_K": {
+      "median": -150.0,
+      "p05": -450.0,
+      "p95": 0.0,
+      "within_250K": 0.7072,
+      "within_400K": 0.9124
+    },
+    "Au_share_in_A": {
+      "median": 0.0,
+      "p05": 0.0,
+      "p95": 0.026428399225063754
+    },
+    "Au_share_in_B": {
+      "median": 0.600458919561607,
+      "p05": 0.10505963688492721,
+      "p95": 0.9473408434168485
+    },
+    "Au_share_in_C": {
+      "median": 0.3422953914905563,
+      "p05": 0.006097650301499141,
+      "p95": 0.659755792735448
+    },
+    "Au_share_in_D1": {
+      "median": 3.597322464242162e-05,
+      "p05": 4.041096700512205e-16,
+      "p95": 0.5392842619759826
+    },
+    "Au_share_in_D2": {
+      "median": 1.3743960597593153e-15,
+      "p05": 0.0,
+      "p95": 1.419720897755229e-11
+    },
+    "Cd_in_Au_band": {
+      "feeds_containing": 5000,
+      "feeds_with_any": 5000,
+      "max": 9.397283679307847e-05,
+      "median": 5.301930933148496e-07,
+      "p95": 1.4563918817342385e-05,
+      "rate_bound_95": null
+    },
+    "Cd_in_gold_bands": {
+      "feeds_containing": 5000,
+      "feeds_with_any": 5000,
+      "max": 9.718836655396156e-05,
+      "median": 2.0350382750186593e-06,
+      "rate_bound_95": null
+    },
+    "Hg_in_Au_band": {
+      "feeds_containing": 5000,
+      "feeds_with_any": 0,
+      "max": 0.0,
+      "median": 0.0,
+      "p95": 0.0,
+      "rate_bound_95": 0.0006
+    },
+    "Hg_in_gold_bands": {
+      "feeds_containing": 5000,
+      "feeds_with_any": 0,
+      "max": 0.0,
+      "median": 0.0,
+      "rate_bound_95": 0.0006
+    },
+    "Pb_in_Au_band": {
+      "feeds_containing": 5000,
+      "feeds_with_any": 0,
+      "max": 0.0,
+      "median": 0.0,
+      "p95": 0.0,
+      "rate_bound_95": 0.0006
+    },
+    "Pb_in_gold_bands": {
+      "feeds_containing": 5000,
+      "feeds_with_any": 0,
+      "max": 0.0,
+      "median": 0.0,
+      "rate_bound_95": 0.0006
+    },
+    "Pd_band_counts": {
+      "A": 244,
+      "B": 4755,
+      "C": 1
+    },
+    "Pt_band_counts": {
+      "A": 277,
+      "B": 4722,
+      "C": 1
+    },
+    "Zn_in_Au_band": {
+      "feeds_containing": 5000,
+      "feeds_with_any": 0,
+      "max": 0.0,
+      "median": 0.0,
+      "p95": 0.0,
+      "rate_bound_95": 0.0006
+    },
+    "Zn_in_gold_bands": {
+      "feeds_containing": 5000,
+      "feeds_with_any": 0,
+      "max": 0.0,
+      "median": 0.0,
+      "rate_bound_95": 0.0006
+    },
+    "by_pressure": [
+      {
+        "Au_band_A": 0.0,
+        "Au_band_B": 0.010029498525073746,
+        "Au_band_C": 0.5899705014749262,
+        "Au_band_D1": 0.4,
+        "Au_band_D2": 0.0,
+        "Au_in_BC_median": 0.6307316351326709,
+        "Au_in_BC_p05": 0.3973472690241845,
+        "Au_in_B_median": 0.1713500450804737,
+        "Au_in_C_median": 0.4391174764688607,
+        "Au_same_band_as_Fe": 0.08790560471976401,
+        "Cd_in_Au_band_max": 8.02205670682921e-06,
+        "Hg_gas_median": 1.0,
+        "Hg_gas_p05": 1.0,
+        "Hg_gas_p95": 1.0,
+        "P_atm": 0.1,
+        "T50_Au_median": 1700.0,
+        "T50_Fe_median": 2000.0,
+        "feeds": 1695,
+        "share_Au_median": 0.4992217571948689
+      },
+      {
+        "Au_band_A": 0.0,
+        "Au_band_B": 0.743417023882425,
+        "Au_band_C": 0.256582976117575,
+        "Au_band_D1": 0.0,
+        "Au_band_D2": 0.0,
+        "Au_in_BC_median": 0.9998917638746814,
+        "Au_in_BC_p05": 0.9926101343264372,
+        "Au_in_B_median": 0.6263142396664702,
+        "Au_in_C_median": 0.3695376417422483,
+        "Au_same_band_as_Fe": 0.7379056950398041,
+        "Cd_in_Au_band_max": 3.779516320181192e-05,
+        "Hg_gas_median": 0.5833373018733718,
+        "Hg_gas_p05": 0.19011027328035826,
+        "Hg_gas_p95": 1.0,
+        "P_atm": 1.0,
+        "T50_Au_median": 2100.0,
+        "T50_Fe_median": 2250.0,
+        "feeds": 1633,
+        "share_Au_median": 0.6320715424049818
+      },
+      {
+        "Au_band_A": 0.011961722488038277,
+        "Au_band_B": 0.9880382775119617,
+        "Au_band_C": 0.0,
+        "Au_band_D1": 0.0,
+        "Au_band_D2": 0.0,
+        "Au_in_BC_median": 0.999999994573275,
+        "Au_in_BC_p05": 0.7164803451964432,
+        "Au_in_B_median": 0.829426109957593,
+        "Au_in_C_median": 0.12967752278282518,
+        "Au_same_band_as_Fe": 0.9832535885167464,
+        "Cd_in_Au_band_max": 9.397283679307847e-05,
+        "Hg_gas_median": 0.09899408021884415,
+        "Hg_gas_p05": 0.031079597025718275,
+        "Hg_gas_p95": 0.41179590072956757,
+        "P_atm": 5.0,
+        "T50_Au_median": 2350.0,
+        "T50_Fe_median": 2450.0,
+        "feeds": 1672,
+        "share_Au_median": 0.829426109957593
+      }
+    ],
+    "failed": 0,
+    "samples": 5000,
+    "share_Au": {
+      "median": 0.6509219645770237,
+      "p05": 0.4391153565025665,
+      "p95": 0.9473408434168485
+    }
+  },
+  "sweep_5000_claims_vapor_model": {
+    "Au_band_counts": {
+      "A": 1296,
+      "B": 2953,
+      "C": 751
+    },
+    "Au_minus_Fe_T50_K": {
+      "median": 50.0,
+      "p05": -200.0,
+      "p95": 500.0,
+      "within_250K": 0.8014,
+      "within_400K": 0.8974
+    },
+    "Cd_in_Au_band": {
+      "feeds_with_any": 5000,
+      "max": 0.0023725206739134,
+      "median": 2.974006007254252e-05,
+      "p95": 0.00047780755171099515,
+      "rate_bound_95": null
+    },
+    "Hg_in_Au_band": {
+      "feeds_with_any": 0,
+      "max": 0.0,
+      "median": 0.0,
+      "p95": 0.0,
+      "rate_bound_95": 0.0006
+    },
+    "Pb_in_Au_band": {
+      "feeds_with_any": 0,
+      "max": 0.0,
+      "median": 0.0,
+      "p95": 0.0,
+      "rate_bound_95": 0.0006
+    },
+    "Zn_in_Au_band": {
+      "feeds_with_any": 0,
+      "max": 0.0,
+      "median": 0.0,
+      "p95": 0.0,
+      "rate_bound_95": 0.0006
+    },
+    "by_pressure": [
+      {
+        "Au_band_A": 0.0,
+        "Au_band_B": 0.5569321533923304,
+        "Au_band_C": 0.4430678466076696,
+        "Au_same_band_as_Fe": 0.5433628318584071,
+        "Cd_in_Au_band_max": 6.381737313699395e-05,
+        "Hg_gas_median": 1.0,
+        "Hg_gas_p05": 1.0,
+        "Hg_gas_p95": 1.0,
+        "P_atm": 0.1,
+        "T50_Au_median": 2000.0,
+        "T50_Fe_median": 2000.0,
+        "feeds": 1695,
+        "share_Au_median": 0.535532997129491
+      },
+      {
+        "Au_band_A": 0.14880587875076545,
+        "Au_band_B": 0.8511941212492345,
+        "Au_band_C": 0.0,
+        "Au_same_band_as_Fe": 0.8609920391916718,
+        "Cd_in_Au_band_max": 0.0004444024262803,
+        "Hg_gas_median": 0.5843976156227614,
+        "Hg_gas_p05": 0.19075904083656542,
+        "Hg_gas_p95": 1.0,
+        "P_atm": 1.0,
+        "T50_Au_median": 2300.0,
+        "T50_Fe_median": 2250.0,
+        "feeds": 1633,
+        "share_Au_median": 0.6331881863163766
+      },
+      {
+        "Au_band_A": 0.6297846889952153,
+        "Au_band_B": 0.37021531100478466,
+        "Au_band_C": 0.0,
+        "Au_same_band_as_Fe": 0.41148325358851673,
+        "Cd_in_Au_band_max": 0.0023725206739134,
+        "Hg_gas_median": 0.0991857563299381,
+        "Hg_gas_p05": 0.03125065247064485,
+        "Hg_gas_p95": 0.4097724081036177,
+        "P_atm": 5.0,
+        "T50_Au_median": 2650.0,
+        "T50_Fe_median": 2450.0,
+        "feeds": 1672,
+        "share_Au_median": 0.7031276314139849
+      }
+    ],
+    "samples": 5000,
+    "share_Au": {
+      "median": 0.6255040132823217,
+      "p05": 0.4454237993852733,
+      "p95": 0.9343812654573529
+    },
+    "share_Au_by_gamma": {
+      "corr_log_gamma": -0.5921627019059885,
+      "gamma_above_1.5": 0.5181808729368105,
+      "gamma_below_0.6": 0.7796525286965165
+    }
+  },
+  "sweep_5000_vapor_model_claims": {
+    "Au_band_counts": {
+      "A": 1296,
+      "B": 2953,
+      "C": 751
+    },
+    "Au_minus_Fe_T50_K": {
+      "median": 50.0,
+      "p05": -200.0,
+      "p95": 500.0,
+      "within_250K": 0.8014,
+      "within_400K": 0.8974
+    },
+    "Cd_in_Au_band": {
+      "feeds_containing": 5000,
+      "feeds_with_any": 5000,
+      "max": 0.0023725206739134,
+      "median": 2.974006007254252e-05,
+      "p95": 0.00047780755171099515,
+      "rate_bound_95": null
+    },
+    "Hg_in_Au_band": {
+      "feeds_containing": 5000,
+      "feeds_with_any": 0,
+      "max": 0.0,
+      "median": 0.0,
+      "p95": 0.0,
+      "rate_bound_95": 0.0006
+    },
+    "Pb_in_Au_band": {
+      "feeds_containing": 971,
+      "feeds_with_any": 0,
+      "max": 0.0,
+      "median": 0.0,
+      "p95": 0.0,
+      "rate_bound_95": 0.003089598352214212
+    },
+    "Zn_in_Au_band": {
+      "feeds_containing": 971,
+      "feeds_with_any": 0,
+      "max": 0.0,
+      "median": 0.0,
+      "p95": 0.0,
+      "rate_bound_95": 0.003089598352214212
+    },
+    "by_pressure": [
+      {
+        "Au_band_A": 0.0,
+        "Au_band_B": 0.5569321533923304,
+        "Au_band_C": 0.4430678466076696,
+        "Au_band_D": 0.0,
+        "Au_same_band_as_Fe": 0.5433628318584071,
+        "Cd_in_Au_band_max": 6.381737313699395e-05,
+        "Hg_gas_median": 1.0,
+        "Hg_gas_p05": 1.0,
+        "Hg_gas_p95": 1.0,
+        "P_atm": 0.1,
+        "T50_Au_median": 2000.0,
+        "T50_Fe_median": 2000.0,
+        "feeds": 1695,
+        "share_Au_median": 0.535532997129491
+      },
+      {
+        "Au_band_A": 0.14880587875076545,
+        "Au_band_B": 0.8511941212492345,
+        "Au_band_C": 0.0,
+        "Au_band_D": 0.0,
+        "Au_same_band_as_Fe": 0.8609920391916718,
+        "Cd_in_Au_band_max": 0.0004444024262803,
+        "Hg_gas_median": 0.5843976156227614,
+        "Hg_gas_p05": 0.19075904083656542,
+        "Hg_gas_p95": 1.0,
+        "P_atm": 1.0,
+        "T50_Au_median": 2300.0,
+        "T50_Fe_median": 2250.0,
+        "feeds": 1633,
+        "share_Au_median": 0.6331881863163766
+      },
+      {
+        "Au_band_A": 0.6297846889952153,
+        "Au_band_B": 0.37021531100478466,
+        "Au_band_C": 0.0,
+        "Au_band_D": 0.0,
+        "Au_same_band_as_Fe": 0.41148325358851673,
+        "Cd_in_Au_band_max": 0.0023725206739134,
+        "Hg_gas_median": 0.0991857563299381,
+        "Hg_gas_p05": 0.03125065247064485,
+        "Hg_gas_p95": 0.4097724081036177,
+        "P_atm": 5.0,
+        "T50_Au_median": 2650.0,
+        "T50_Fe_median": 2450.0,
+        "feeds": 1672,
+        "share_Au_median": 0.7031276314139849
+      }
+    ],
+    "samples": 5000,
+    "share_Au": {
+      "median": 0.6255040132823217,
+      "p05": 0.4454237993852733,
+      "p95": 0.9343812654573529
+    },
+    "share_Au_by_gamma": {
+      "corr_log_gamma": -0.5921627019059885,
+      "gamma_above_1.5": 0.5181808729368105,
+      "gamma_below_0.6": 0.7796525286965165
+    }
+  },
+  "sweep_summary_24": {
+    "Au_band_mode": "B",
+    "Cd_in_Au_band": {
+      "median": 5.286762633072719e-07,
+      "p05": 5.7471163281119185e-08,
+      "p95": 3.261766841759473e-05
+    },
+    "Hg_left_in_gas": {
+      "median": 0.5210979213608369,
+      "p05": 0.04958901496918073,
+      "p95": 1.0
+    },
+    "Pb_in_Au_band": {
+      "median": 0.0,
+      "p05": 0.0,
+      "p95": 0.0
+    },
+    "T50_Au": {
+      "median": 2100.0,
+      "p05": 1550.0,
+      "p95": 2535.0
+    },
+    "T50_Fe": {
+      "median": 2250.0,
+      "p05": 2000.0,
+      "p95": 2577.4999999999995
+    },
+    "T50_Zn": {
+      "median": 650.0,
+      "p05": 600.0,
+      "p95": 800.0
+    },
+    "Zn_in_Au_band": {
+      "median": 0.0,
+      "p05": 0.0,
+      "p95": 0.0
+    },
+    "ppm_in_band_Au": {
+      "median": 2.2519351190329897,
+      "p05": 0.6963700508597269,
+      "p95": 3.7197751512144
+    },
+    "samples": 24,
+    "seconds": 268.14241552352905,
+    "share_Au": {
+      "median": 0.5949962648660628,
+      "p05": 0.5136695229030124,
+      "p95": 0.9893225404748032
+    }
+  },
+  "sweep_summary_5000": {
+    "Au_band_mode": "B",
+    "Cd_in_Au_band": {
+      "median": 5.301930933148496e-07,
+      "p05": 3.602140312452072e-08,
+      "p95": 1.4563918817342385e-05
+    },
+    "Hg_left_in_gas": {
+      "median": 0.6154587657740804,
+      "p05": 0.046346162250803104,
+      "p95": 1.0
+    },
+    "Pb_in_Au_band": {
+      "median": 0.0,
+      "p05": 0.0,
+      "p95": 0.0
+    },
+    "T50_Au": {
+      "median": 2100.0,
+      "p05": 1550.0,
+      "p95": 2450.0
+    },
+    "T50_Fe": {
+      "median": 2250.0,
+      "p05": 2000.0,
+      "p95": 2500.0
+    },
+    "T50_Zn": {
+      "median": 650.0,
+      "p05": 600.0,
+      "p95": 750.0
+    },
+    "Zn_in_Au_band": {
+      "median": 0.0,
+      "p05": 0.0,
+      "p95": 0.0
+    },
+    "ppm_in_band_Au": {
+      "median": 1.8700969675364338,
+      "p05": 0.4693988241229884,
+      "p95": 28.820086840231408
+    },
+    "samples": 5000,
+    "seconds": 1466.944067955017,
+    "share_Au": {
+      "median": 0.6509219645770237,
+      "p05": 0.43911535650256656,
+      "p95": 0.9473408434168485
+    }
+  },
+  "sweep_summary_5000_vapor_model": {
+    "Au_band_mode": "B",
+    "Cd_in_Au_band": {
+      "median": 2.9740060072542518e-05,
+      "p05": 1.0927320038214431e-06,
+      "p95": 0.00047780755171109035
+    },
+    "Hg_left_in_gas": {
+      "median": 0.614948537147854,
+      "p05": 0.04645324173708947,
+      "p95": 1.0
+    },
+    "Pb_in_Au_band": {
+      "median": 0.0,
+      "p05": 0.0,
+      "p95": 0.0
+    },
+    "T50_Au": {
+      "median": 2300.0,
+      "p05": 1850.0,
+      "p95": 2900.0
+    },
+    "T50_Fe": {
+      "median": 2250.0,
+      "p05": 2000.0,
+      "p95": 2500.0
+    },
+    "T50_Zn": {
+      "median": 700.0,
+      "p05": 600.0,
+      "p95": 800.0
+    },
+    "Zn_in_Au_band": {
+      "median": 0.0,
+      "p05": 0.0,
+      "p95": 0.0
+    },
+    "ppm_in_band_Au": {
+      "median": 1.8250922037146857,
+      "p05": 0.4752964450882325,
+      "p95": 7.566604984572454
+    },
+    "samples": 5000,
+    "seconds": 1067.5996997356415,
+    "share_Au": {
+      "median": 0.6255040132823217,
+      "p05": 0.4454237993852733,
+      "p95": 0.9343812654573529
+    }
+  },
+  "theory_min_separation_work_MWh": 0.06669548059899748,
+  "theory_min_work_share_of_vaporization": 0.02300208430793216,
+  "theory_onset_max_abs_diff_K": 18.166399669195926,
+  "theory_volatility": [
+    {
+      "N_min_99": 0.505,
+      "N_min_999": 0.7591,
+      "T_K": 1500,
+      "alpha": 79946198.0787,
+      "heavy": "Fe",
+      "light": "Zn",
+      "single_stage_light_left_when_99pct_heavy_condensed": 1.0
+    },
+    {
+      "N_min_99": 0.598,
+      "N_min_999": 0.8989,
+      "T_K": 1600,
+      "alpha": 4721169.2123,
+      "heavy": "Fe",
+      "light": "Mg",
+      "single_stage_light_left_when_99pct_heavy_condensed": 1.0
+    },
+    {
+      "N_min_99": 0.9795,
+      "N_min_999": 1.4723,
+      "T_K": 700,
+      "alpha": 11875.9273,
+      "heavy": "Zn",
+      "light": "Hg",
+      "single_stage_light_left_when_99pct_heavy_condensed": 0.9996
+    },
+    {
+      "N_min_99": 1.4787,
+      "N_min_999": 2.2226,
+      "T_K": 1800,
+      "alpha": 500.1971,
+      "heavy": "Cu",
+      "light": "Pb",
+      "single_stage_light_left_when_99pct_heavy_condensed": 0.9908
+    },
+    {
+      "N_min_99": 2.1419,
+      "N_min_999": 3.2194,
+      "T_K": 2000,
+      "alpha": 73.0217,
+      "heavy": "Au",
+      "light": "Ag",
+      "single_stage_light_left_when_99pct_heavy_condensed": 0.9389
+    },
+    {
+      "N_min_99": 3.463,
+      "N_min_999": 5.2052,
+      "T_K": 2200,
+      "alpha": 14.2079,
+      "heavy": "Ni",
+      "light": "Cu",
+      "single_stage_light_left_when_99pct_heavy_condensed": 0.7232
+    },
+    {
+      "N_min_99": 4.8477,
+      "N_min_999": 7.2865,
+      "T_K": 900,
+      "alpha": 6.6577,
+      "heavy": "Zn",
+      "light": "Cd",
+      "single_stage_light_left_when_99pct_heavy_condensed": 0.5007
+    },
+    {
+      "N_min_99": 258.25,
+      "N_min_999": 388.166,
+      "T_K": 2200,
+      "alpha": 1.0362,
+      "heavy": "Sn",
+      "light": "Cu",
+      "single_stage_light_left_when_99pct_heavy_condensed": 0.0117
+    },
+    {
+      "N_min_99": 25.933,
+      "N_min_999": 38.9789,
+      "T_K": 2500,
+      "alpha": 1.4253,
+      "heavy": "Fe",
+      "light": "Au",
+      "single_stage_light_left_when_99pct_heavy_condensed": 0.0395
+    },
+    {
+      "N_min_99": 69.0351,
+      "N_min_999": 103.7641,
+      "T_K": 2600,
+      "alpha": 1.1424,
+      "heavy": "Co",
+      "light": "Ni",
+      "single_stage_light_left_when_99pct_heavy_condensed": 0.0178
+    },
+    {
+      "N_min_99": 21.5551,
+      "N_min_999": 32.3987,
+      "T_K": 2600,
+      "alpha": 1.5317,
+      "heavy": "Pd",
+      "light": "Fe",
+      "single_stage_light_left_when_99pct_heavy_condensed": 0.0495
+    }
+  ],
+  "validation_bp_max_abs_error_pct": 2.29,
+  "validation_bp_median_abs_error_pct": 0.16,
+  "validation_gas_max_rel_diff": 2.6523852197271104e-08,
+  "verification_independent_data": {
+    "elements": 23,
+    "max_abs_T50_diff_K": 350.0,
+    "median_abs_T50_diff_K": 0.0,
+    "same_main_band": 21
+  },
+  "verification_independent_solver": {
+    "both_converged": 51,
+    "cantera_converged": 51,
+    "final_by_cantera": 0,
+    "final_certified": 53,
+    "max_rel_diff_condensed": 0.0018857107210319191,
+    "max_rel_diff_gas_major": 2.3526907645224707e-05,
+    "paramanu_not_converged": 0,
+    "paramanu_raw_certified": 53,
+    "same_phase_set": 51,
+    "states": 53
+  }
+}

@@ -1,0 +1,97 @@
+% paramanu.sty -- house style for the PARAMANU Reclaimer paper.
+% Mirrors the look of the reference paper: A4, 11pt Latin Modern, 1in margins,
+% running header with rule, "N of M" footer, navy "Key Insight" boxes,
+% green author-year citations.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{paramanu}[2026/09/28 PARAMANU paper style]
+
+% ---- Fonts and page -------------------------------------------------------
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{lmodern}
+\RequirePackage[a4paper,margin=1in,headheight=14pt]{geometry}
+\RequirePackage{microtype}
+
+% ---- Maths, graphics, tables ----------------------------------------------
+\RequirePackage{amsmath,amssymb,amsthm,bm}
+\RequirePackage{graphicx}
+\RequirePackage{booktabs,array,tabularx}
+\RequirePackage[dvipsnames,svgnames,table]{xcolor}
+\RequirePackage{tikz}
+\RequirePackage[most]{tcolorbox}
+\RequirePackage{enumitem}
+\RequirePackage{float}
+\RequirePackage{algorithm}
+\RequirePackage[noend]{algpseudocode}
+\RequirePackage{pifont}
+\RequirePackage{newunicodechar}
+\RequirePackage[font=normalsize,labelsep=colon,skip=6pt]{caption}
+
+% ---- Colours (shared with the Word template and figures) ------------------
+\definecolor{citegreen}{rgb}{0.13,0.55,0.13}
+\definecolor{linkblue}{rgb}{0.0,0.0,0.85}
+\definecolor{urlblue}{rgb}{0.0,0.0,0.60}
+\definecolor{kinavy}{rgb}{0.0,0.0,0.55}
+\definecolor{kiback}{rgb}{0.95,0.95,1.0}
+
+% ---- Citations and links --------------------------------------------------
+\RequirePackage[square,comma]{natbib}
+\setcitestyle{aysep={,},yysep={,},citesep={;}}
+\RequirePackage{fancyhdr}
+\RequirePackage{lastpage}
+\RequirePackage[hyphens]{url}
+\RequirePackage[colorlinks=true,linkcolor=linkblue,citecolor=citegreen,
+  urlcolor=urlblue,bookmarksnumbered=true]{hyperref}
+\urlstyle{tt}
+
+% ---- Tick and cross marks usable as plain Unicode in the source ------------
+\newunicodechar{✓}{\ensuremath{\checkmark}}
+\newunicodechar{✗}{\ding{55}}
+\newunicodechar{∼}{\ensuremath{\sim}}
+\newunicodechar{€}{\texteuro}
+\newunicodechar{−}{\textminus}
+
+% ---- Header / footer -------------------------------------------------------
+\newcommand{\runningtitle}{}
+\newcommand{\setrunningtitle}[1]{\renewcommand{\runningtitle}{#1}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\runningtitle}
+\fancyfoot[C]{\thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{%
+  \fancyhf{}\fancyhead[L]{\small\runningtitle}%
+  \fancyfoot[C]{\thepage\ of \pageref{LastPage}}}
+
+% ---- Theorem-like environments are declared in the main .tex so pandoc sees them.
+
+% ---- Title block (environments so the Word converter can style them) --------
+\newenvironment{ptitle}{\par\centering\LARGE\bfseries}{\par\vspace{0.9em}}
+\newenvironment{psubtitle}{\par\centering\large\linespread{1.25}\selectfont}{\par\vspace{1.1em}}
+\newenvironment{pauthor}{\par\centering\large}{\par\vspace{0.9em}}
+\newenvironment{pdate}{\par\centering\large}{\par\vspace{2.2em}}
+\newenvironment{pabstract}{\begin{abstract}}{\end{abstract}}
+\newenvironment{pkeywords}{\par\vspace{0.5em}\noindent}{\par}
+
+% ---- Key Insight box ---------------------------------------------------------
+\newtcolorbox{keyinsight}{enhanced,breakable,
+  colback=kiback,colframe=kinavy,coltitle=white,
+  title={Key Insight},fonttitle=\bfseries,
+  boxrule=0.6pt,arc=1.5mm,left=6pt,right=6pt,top=4pt,bottom=4pt,
+  before skip=10pt,after skip=10pt}
+
+\newtcolorbox{execsummary}{enhanced,breakable,
+  colback=kiback,colframe=kinavy,coltitle=white,
+  title={Executive Summary},fonttitle=\bfseries,
+  boxrule=0.6pt,arc=1.5mm,left=6pt,right=6pt,top=4pt,bottom=4pt,
+  before skip=10pt,after skip=10pt}
+
+% ---- Closing footer on the last page -----------------------------------------
+\newenvironment{pclosing}{\par\vfill\centering\rule{0.5\textwidth}{0.4pt}\par\vspace{4pt}\small}{\par}
+
+% ---- Lists: match the reference paper's compact numbered lists ----------------
+\setlist[enumerate]{leftmargin=2.2em,itemsep=2pt,topsep=4pt}
+\setlist[itemize]{leftmargin=2.2em,itemsep=2pt,topsep=4pt}
+
+\endinput

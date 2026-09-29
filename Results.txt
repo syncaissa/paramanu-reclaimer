@@ -1,0 +1,547 @@
+                         PARAMANU Reclaimer - Results                         
+==============================================================================
+
+Generated: 2026-09-29 16:26 UTC by simulation/tools/write_results.py
+Code fingerprint: 0e004da2fb783a25  (python simulation/tools/write_results.py --fingerprint)
+
+Every number below was computed by the scripts in simulation/scripts and read from
+simulation/results. Nothing is typed by hand. To reproduce, see HOWTOREPLICATE.txt.
+One 'feed' = one wet tonne of excavated landfill residue (default composition in
+simulation/paramanu_sim/feed.py). Default pressure 1 atm.
+
+
+------------------------------------------------------------------------------
+1. Validation against known facts
+   Script: simulation/scripts/01_validate.py
+------------------------------------------------------------------------------
+Source: validation_boiling_points.csv (2026-09-29 12:59 UTC); validation_gas_crosscheck.csv (2026-09-29 12:59 UTC)
+
+Normal boiling points of pure elements: median error 0.16%, maximum 2.29%.
+Gas mixtures (C,H,O,N,Si,Fe,Cl), 1,500-4,000 K, against Cantera's solver: max relative difference 2.65e-08.
+
+element model_K CRC_K error_K error_pct
+     Fe   3,139  3134       5      0.16
+     Cu   2,838  2835     3.1      0.11
+     Ni   3,161  3186   -25.4      -0.8
+     Cr   2,951  2944     6.8      0.23
+     Al   2,792  2743    48.8      1.78
+     Si   3,488  3538   -49.7      -1.4
+     Ti   3,641  3560    81.4      2.29
+     Ca   1,778  1757    20.7      1.18
+     Mg   1,364  1363     1.1      0.08
+     Na   1,154  1156    -1.7     -0.15
+      K   1,030  1032    -1.6     -0.15
+     Li   1,610  1615      -5     -0.31
+     Zn   1,179  1180      -1     -0.09
+     Pb   2,021  2022    -1.1     -0.05
+     Hg     630   630       0         0
+
+------------------------------------------------------------------------------
+2. The condensation ladder, default feed, 1 atm
+   Script: simulation/scripts/02_ladder.py
+------------------------------------------------------------------------------
+Source: ladder_band_recovery.csv (2026-09-29 14:55 UTC); ladder_condensation_T.csv (2026-09-29 14:55 UTC)
+
+Bands (K): A >= 2600, B 2000-2600, C 1600-2000, D1 1300-1600, D2 1000-1300, E 400-1000,
+cold < 400; 'gas' = still gaseous at 300 K. Share of each element collected in each band (%):
+
+            A      B     C    D1    D2      E  cold   gas
+element                                                  
+Ag        0.0    0.0   5.3   3.5  91.2    0.0   0.0   0.0
+Al        0.0   99.8   0.2   0.0   0.0    0.0   0.0   0.0
+Au        0.0   58.1  41.9   0.0   0.0    0.0   0.0   0.0
+Bi        0.0    0.0   0.1   0.0  99.9    0.0   0.0   0.0
+C         1.4    9.2   8.2   0.4  21.9   36.1  14.9   7.8
+Ca        0.0   92.5   7.5   0.0   0.0    0.0   0.0   0.0
+Cd        0.0    0.0   0.0   0.0   0.0   88.9  11.1   0.0
+Cl        0.0    0.0   0.0   0.0  96.6    3.3   0.0   0.0
+Co        0.0  100.0   0.0   0.0   0.0    0.0   0.0   0.0
+Cr        0.0    0.0  83.7  16.3   0.0    0.0   0.0   0.0
+Cu        0.0    0.0  90.1   9.9   0.0    0.0   0.0   0.0
+F         0.0    0.0   0.0   0.0  43.4   55.0   0.0   1.6
+Fe        0.0   96.1   3.9   0.0   0.0    0.0   0.0   0.0
+Ga        0.0    5.0  61.2  15.1  14.4    4.4   0.0   0.0
+H         0.0    0.0   0.0   0.0   0.0    0.0  82.1  17.9
+Hg        0.0    0.0   0.0   0.0   0.0    0.0  49.8  50.2
+In        0.0    0.0   6.0   3.6   9.4   80.9   0.0   0.0
+K         0.0    0.0   0.0   0.0  97.7    2.3   0.0   0.0
+Li        0.0    0.0   0.0   0.0   7.7   92.3   0.0   0.0
+Mg        0.0    1.6  98.4   0.0   0.0    0.0   0.0   0.0
+Mn        0.0    1.9  17.0  68.9  12.2    0.0   0.0   0.0
+N         0.0    0.0   0.0   0.0   0.0    0.0   0.1  99.9
+Na        0.0    0.0   0.0   7.4  92.3    0.3   0.0   0.0
+Nd       23.8   69.2   7.0   0.0   0.0    0.0   0.0   0.0
+Ni        0.0    0.0  99.3   0.7   0.0    0.0   0.0   0.0
+O         0.0   11.2  23.6   0.1   6.0    0.1  58.8   0.2
+P         0.0    0.0   0.0   0.0   0.0   88.1  11.9   0.0
+Pb        0.0    0.0   0.0   0.0  78.5   21.5   0.0   0.0
+Pd        0.0  100.0   0.0   0.0   0.0    0.0   0.0   0.0
+Pt        0.0  100.0   0.0   0.0   0.0    0.0   0.0   0.0
+S         0.0    0.0  15.3  84.6   0.1    0.0   0.0   0.0
+Sb        0.0    5.8  66.6  15.6  12.0    0.0   0.0   0.0
+Si       12.6   26.5  60.7   0.2   0.0    0.0   0.0   0.0
+Sn        0.0   14.2  50.6  24.2  10.9    0.0   0.0   0.0
+Ti       97.5    2.5   0.0   0.0   0.0    0.0   0.0   0.0
+W        99.7    0.3   0.0   0.0   0.0    0.0   0.0   0.0
+Zn        0.0    0.0   0.0   0.0   0.0  100.0   0.0   0.0
+
+Half-condensation temperature T50 (K; '-' = never 50% condensed):
+  W 3,000, Ti 2,825, Nd 2,350, Pt 2,325, Pd 2,300, Co 2,275, Fe 2,225, Al 2,200, Ca 2,100, Au 2,075, Mg 1,950, Si 1,925, Ni 1,850, Sn 1,725, Cu 1,700, Ga 1,675, Sb 1,675, Cr 1,650, S 1,500, Mn 1,375, Na 1,225, Ag 1,175, Cl 1,125, K 1,125, Bi 1,025, Pb 1,025, F 975, C 925, Li 850, Zn 675, In 650, Cd 475, P 400, H 350, O 350, Hg -, N -
+
+Mass collected per band (kg per wet tonne): A 20.7, B 140.2, C 171.5, D1 4.1, D2 85.8, E 61.8, cold 208.1, gas 19.4
+Gold: 58.1% in its main band (B), 13.9 ppm in that band's metal (27.9x the feed's 0.5 ppm).
+Mercury still gaseous at 300 K: 50.2% (a mercury trap is required).
+
+------------------------------------------------------------------------------
+3. The waste as its own reducing agent
+   Script: simulation/scripts/03_reductant.py
+------------------------------------------------------------------------------
+Source: reductant_metal_share.csv (2026-09-29 13:00 UTC)
+
+Reductant ratio of the default feed: 1.52 (> 1: more carbon and hydrogen than needed to reduce the metal oxides).
+Share of iron condensed as metal, by reductant ratio: 0.0: 43%, 0.5: 100%, 1.0: 100%, 2.0: 100%
+
+------------------------------------------------------------------------------
+4. Energy
+   Script: simulation/scripts/04_energy.py
+------------------------------------------------------------------------------
+Source: energy_envelope.csv (2026-09-29 13:00 UTC)
+
+All gas at 2,889 K (1 atm): thermodynamic minimum 2.9 MWh per wet tonne; 5.43 MWh at 5,000 K.
+Torch power for 1,000 t/day at the minimum: 121 MW.
+Minimum work of separation (Result 6): 0.0667 MWh/t, 2.3% of the vaporization energy.
+
+MWh_at_5000K MWh_at_all_gas_T P_atm all_gas_T dry_kg gas_mol pretreat
+        5.97             2.95   0.1     2,629    750  36,298        0
+        5.54                3     1     2,889    750  35,875        0
+        5.04             3.04    10     3,183    750  35,304        0
+        5.85             2.86   0.1     2,629    711  35,495    0.052
+        5.43              2.9     1     2,889    711  35,076    0.052
+        4.93             2.95    10     3,188    711  34,533    0.052
+        5.35             2.77   0.1     2,704    638  34,086     0.15
+        5.06             2.77     1     2,963    638  33,331     0.15
+        4.69             2.79    10     3,271    638  32,553     0.15
+        4.86             2.52   0.1     2,810    525  30,552      0.3
+        4.73             2.47     1     3,051    525  29,522      0.3
+        4.37             2.46    10     3,346    525  28,591      0.3
+
+------------------------------------------------------------------------------
+5. Chamber and reactor design (why the hot zone must be brief)
+   Script: simulation/scripts/05_chamber.py, 08_reactor_design.py
+------------------------------------------------------------------------------
+Source: chamber_sizing.csv (2026-09-29 13:01 UTC); design_flow_loss.csv (2026-09-29 14:28 UTC)
+
+1 t as gas at 1 atm: 11,694 m3; wall radiation 2,946 MW (a batch cannot be held hot).
+Maximum hot-zone residence for 10% / 5% radiation loss:
+     10 t/day: 2.51 ms / 1 ms
+    100 t/day: 7.94 ms / 3.16 ms
+   1000 t/day: 25.1 ms / 10 ms
+Condenser duty per band (MWh per tonne): A 0.33, B 0.68, C 0.53, D1 0.08, D2 0.28, E 0.38, cold 0.13
+Ionization at 1 atm (Saha): 3000 K 1.72e-04, 5000 K 7.81e-03, 8000 K 0.0538, 10000 K 0.115
+
+------------------------------------------------------------------------------
+6. Closed-form theory checked against the simulation
+   Script: simulation/scripts/07_theory_checks.py
+------------------------------------------------------------------------------
+Source: theory_condensation_onset.csv (2026-09-29 13:01 UTC); theory_relative_volatility.csv (2026-09-29 13:01 UTC)
+
+Result 3 (closed-form condensation onset) against the full solver: max difference 18.2 K.
+
+light heavy  T_K      alpha N_min_99 N_min_999 single_stage_light_left_when_99pct_heavy_condensed
+   Zn    Fe 1500 79,946,198    0.505     0.759                                                  1
+   Mg    Fe 1600  4,721,169    0.598     0.899                                                  1
+   Hg    Zn  700     11,876     0.98      1.47                                                  1
+   Pb    Cu 1800        500     1.48      2.22                                              0.991
+   Ag    Au 2000         73     2.14      3.22                                              0.939
+   Cu    Ni 2200       14.2     3.46      5.21                                              0.723
+   Cd    Zn  900       6.66     4.85      7.29                                              0.501
+   Cu    Sn 2200       1.04      258       388                                             0.0117
+   Au    Fe 2500       1.43     25.9        39                                             0.0395
+   Ni    Co 2600       1.14       69       104                                             0.0178
+   Fe    Pd 2600       1.53     21.6      32.4                                             0.0495
+
+------------------------------------------------------------------------------
+7. Numerical convergence and one-at-a-time sensitivity
+   Script: simulation/scripts/09_convergence.py, 10_sensitivity.py
+------------------------------------------------------------------------------
+Source: convergence.csv (2026-09-29 13:03 UTC); sensitivity.csv (2026-09-29 13:05 UTC)
+
+Change when the ladder step is halved from 25 K to 12.5 K: Au_in_B 9.92e-03, Fe_in_B 2.57e-11, Hg_gas 5.11e-07, T50_Cu 12.5, T50_Fe 12.5, T50_Zn 12.5, Zn_in_E 0
+
+              case all_gas_T MWh_per_t Au_main_band_share Hg_left_in_gas
+              base     2,889       2.9                0.6          0.506
+        fines x0.8     2,946      2.76              0.584          0.619
+        fines x1.2     2,757      2.95              0.612          0.533
+     plastics x0.8     2,581      2.43              0.611          0.512
+     plastics x1.2     2,950      3.18              0.589          0.625
+        paper x0.8     2,884      2.84              0.607           0.54
+        paper x1.2     2,893      2.95              0.592          0.516
+        glass x0.8     2,911      2.88              0.604          0.514
+        glass x1.2     2,862      2.91              0.595          0.531
+       traces x0.5     2,889       2.9                0.6          0.506
+       traces x2.0     2,889       2.9                0.6          0.506
+  pressure 0.5 atm     2,805      2.88              0.522              1
+  pressure 2.0 atm     2,972      2.91              0.713          0.222
+trace activity 0.3     2,889       2.9              0.931          0.506
+trace activity 3.0     2,889       2.9              0.726          0.506
+
+------------------------------------------------------------------------------
+8. Alloying (ideal liquid-metal solution)
+   Script: simulation/scripts/11_alloy_model.py
+------------------------------------------------------------------------------
+Source: alloy_T50.csv (2026-09-29 13:06 UTC); alloy_recovery.csv (2026-09-29 13:06 UTC)
+
+Half-condensation temperature (K) with pure condensed phases and with an ideal alloy:
+element pure phases ideal alloy
+     Ag       1,175       1,175
+     Al       2,200       2,200
+     Au       2,075       2,025
+     Bi       1,025       1,025
+      C         925         925
+     Ca       2,100       2,100
+     Cd         475         475
+     Cl       1,125       1,125
+     Co       2,275       2,300
+     Cr       1,650       2,225
+     Cu       1,700       1,800
+      F         975         975
+     Fe       2,225       2,475
+     Ga       1,675       1,575
+      H         350         350
+     Hg           -         300
+     In         650         675
+      K       1,125       1,125
+     Li         850         850
+     Mg       1,950       1,950
+     Mn       1,375       1,375
+      N           -           -
+     Na       1,225       1,225
+     Nd       2,350       2,500
+     Ni       1,850       2,525
+      O         350         350
+      P         400         400
+     Pb       1,025       1,025
+     Pd       2,300       2,575
+     Pt       2,325       2,700
+      S       1,500       1,500
+     Sb       1,675       1,600
+     Si       1,925       1,950
+     Sn       1,725       1,325
+     Ti       2,825       2,825
+      W       3,000       3,000
+     Zn         675         675
+
+------------------------------------------------------------------------------
+9. How complex waste comes apart
+   Script: simulation/scripts/13_breakdown.py
+------------------------------------------------------------------------------
+Source: breakdown_residual_molecules.csv (2026-09-29 13:06 UTC); breakdown_particle_times.csv (2026-09-29 13:06 UTC)
+
+Three different starting mixtures with the same atoms reach the same state (max relative difference 3.48e-09): Result 7.
+Equilibrium mole fraction of each starting molecule at 2,890 K:
+  C10H8 1.06e-28, C12H10 2.49e-36, C2F4 1.11e-42, C2H5OH 3.58e-19, C6H5OH 4.36e-24, CCL4 2.02e-26, CF4 7.68e-39, CH3CL 6.40e-11, COCL2 5.89e-16, HCN 4.07e-04
+Largest molecule of 6+ atoms: 1.18e-07.
+Largest silica grain that vaporizes within 10 / 25 ms (um): 3500 K: 27.4 / 43.4; 5000 K: 52.3 / 82.7; 8000 K: 142 / 224
+
+------------------------------------------------------------------------------
+10. Benchmarks against published measurements
+   Script: simulation/scripts/14_benchmarks.py, 15_gold_copper.py
+------------------------------------------------------------------------------
+Source: benchmark_vapor_pressure.csv (2026-09-29 13:06 UTC); benchmark_eaf_dust.csv (2026-09-29 13:06 UTC); gold_copper_benchmark.csv (2026-09-29 13:06 UTC)
+
+Vapor pressure, model / literature (Jia et al. 2013), 800-1300 C: Pb 0.98-1.03, Sn 1.09-1.18
+
+EAF dust reduced with coke at 1,300 C (Chang et al. 2022); measured Zn removal 98.8 / 88.5 / ~50%, Fe metallization >90% at C/O 0.8 and <=10% at 0.16:
+C/O Fe_metallization_pct Zn_removal_pct                 gas
+0.8                  100            100 sweep-equivalent N2
+0.8                  100            100   closed, little N2
+0.5                 53.6            100 sweep-equivalent N2
+0.5                 48.5            100   closed, little N2
+0.2                    0            100 sweep-equivalent N2
+0.2                    0            100   closed, little N2
+
+Distribution between liquid iron and copper, 1,373 K (Yamaguchi et al. 2006):
+element gamma_in_Fe gamma_in_Cu L_FeCu_predicted L_FeCu_measured_FeCuP L_FeCu_measured_FeCuPC predicted_over_measured
+     Au        17.1        0.05         3.33e-03                 0.013               7.10e-03            0.256, 0.469
+     Ag         200        3.06           0.0174              2.70e-03               2.70e-03              6.45, 6.45
+
+------------------------------------------------------------------------------
+11. Gold between the iron and copper bands
+   Script: simulation/scripts/15_gold_copper.py
+------------------------------------------------------------------------------
+Source: gold_copper_ladder.csv (2026-09-29 13:08 UTC)
+
+Share of gold per band:
+              scenario band_A band_B band_C  band_D1  band_D2   band_E band_cold  band_gas main_band
+     ideal (gamma = 1)      0  0.762  0.238 1.05e-05 4.02e-11 3.26e-31         0 6.96e-169         B
+              measured      0  0.581  0.419 5.08e-12 1.55e-26 1.26e-46         0 2.69e-184         B
+measured, against iron      0  0.357  0.643 8.21e-14 1.05e-30 8.53e-51         0 1.82e-188         C
+ measured, toward iron      0  0.815  0.185 1.60e-10 1.09e-22 8.83e-43         0 1.88e-180         B
+     measured, 0.1 atm      0  0.154  0.589    0.257        0 3.08e-24         0 6.62e-173         C
+       measured, 5 atm      0  0.836  0.164 4.37e-20 5.36e-27 6.79e-71         0 1.70e-209         B
+
+------------------------------------------------------------------------------
+12. What one city landfill holds (2.3 Mt, median US landfill)
+   Script: simulation/scripts/16_landfill_inventory.py
+------------------------------------------------------------------------------
+Source: landfill_inventory.csv (2026-09-29 13:08 UTC)
+
+Pounds per landfill: theoretical = all of it; practical = captured in its band x established refining yield.
+stream = the band(s) the element is recovered from; D = D1 + D2.
+element     stream             form captured refining_yield theoretical_lb  practical_lb
+      O        all in oxides, water        1              1  2,529,349,048 2,529,349,048
+      C cold+gas+E fuel gas, carbon    0.582              1    849,151,478   493,905,050
+     Si        ABC     silica/glass    0.998              1    688,689,065   687,052,666
+      H   cold+gas  water, fuel gas        1              1    268,482,880   268,482,837
+     Fe          B            metal    0.987           0.88    225,645,065   195,936,274
+     Al          B            oxide    0.998              1    170,333,098   170,038,247
+     Na          D             NaCl    0.997              1     90,832,225    90,581,529
+     Ca          B            oxide    0.924              1     80,343,495    74,219,320
+     Cl          D            salts    0.966              1     41,655,236    40,257,145
+      K          D              KCl    0.977              1     39,861,713    38,931,159
+     Mg          C            oxide    0.984              1     36,655,305    36,056,999
+     Cu          C            metal    0.978           0.84     14,608,157    12,004,581
+     Ti          A        TiC/oxide    0.974           0.85      6,578,107     5,448,796
+     Zn          E            metal        1           0.92      6,571,079     6,045,393
+      N        gas               N2    0.999              1      6,102,635     6,094,601
+      S         CD   sulfate/sulfur        1              1      5,575,183     5,573,379
+     Pb          D            metal    0.913           0.85      3,839,579     2,980,101
+     Cr          C            metal    0.992           0.85      3,196,397     2,695,695
+     Mn          D            oxide    0.675           0.85      2,662,079     1,526,998
+     Ni         BC            metal    0.998           0.85      1,977,065     1,677,697
+      P          E        phosphate    0.881              1      1,122,654       989,459
+     Sn         BC            metal    0.996           0.85        760,594       643,788
+     Sb         BC            metal    0.926           0.85        114,089        89,786
+     Nd         AB            oxide    0.966           0.85         76,059        62,456
+     Co          B            metal        1           0.85         57,045        48,487
+     Ga         BC            metal    0.896           0.85         57,045        43,439
+     Ag          D            metal     0.88           0.95         38,030        31,792
+     Li          E           Li2CO3    0.922              1         38,030        35,065
+     Bi          D            metal    0.997           0.85         19,015        16,113
+     Cd          E              CdS    0.896           0.85         19,015        14,480
+      F         DE             CaF2    0.984              1         18,508        18,207
+      W          A         WC/oxide    0.997           0.85          7,606         6,447
+     Hg   cold+gas       HgS (trap)        1              1          7,606         7,606
+     In         DE            metal    0.873           0.85          3,803         2,822
+     Au         BC            metal        1           0.95          1,901         1,806
+     Pd          B            metal        1           0.95            761           723
+     Pt          B            metal        1           0.95            190           181
+
+------------------------------------------------------------------------------
+13. Catalysts
+   Script: simulation/scripts/17_catalysts.py
+------------------------------------------------------------------------------
+Source: catalyst_survival.csv (2026-09-29 13:08 UTC); catalyst_damkohler_hot.csv (2026-09-29 13:08 UTC); catalyst_carbothermic_sio.csv (2026-09-29 13:08 UTC)
+
+Lifetime of a catalyst in the hot zone at 2,890 K (s): Fe 1 mm pellet 0.362, Fe 5 nm particle 1.81e-06, Ni 1 mm pellet 0.478, Ni 5 nm particle 2.39e-06, Pd 1 mm pellet 0.56, Pd 5 nm particle 2.80e-06, Pt 1 mm pellet 109, Pt 5 nm particle 5.43e-04
+Damkohler number of CF4 destruction, 25 ms: 2200.0 K 1.83, 2400.0 K 11.5, 2600.0 K 52.9, 2890.0 K 314
+Carbon as a reagent (not a catalyst) lowers silica vaporization: p_SiO 0.001 atm at 1,498 K with carbon vs 2,357 K alone; p_SiO 0.1 atm at 1,811 K with carbon vs 2,874 K alone; p_SiO 0.5 atm at 1,955 K with carbon vs 3,116 K alone
+
+------------------------------------------------------------------------------
+14. Robustness: 5,000 random landfills (Monte Carlo sweep)
+   Script: simulation/scripts/06_sweep.py, 12_sweep_analysis.py
+------------------------------------------------------------------------------
+Source: sweep_5000.csv (2026-09-29 12:54 UTC); sweep_5000_by_pressure.csv (2026-09-29 12:55 UTC)
+
+Feeds: 5,000; completed: 5,000.
+Equilibrium states: 570,000; certified (Result 2 certificate): 570,000; solved by the Cantera backup: 0.
+
+By pressure:
+P_atm feeds Au_band_B Au_band_A Au_band_C Au_band_D1 Au_band_D2 Au_in_B_median Au_in_C_median Au_in_BC_median Au_in_BC_p05 T50_Fe_median T50_Au_median Au_same_band_as_Fe share_Au_median Cd_in_Au_band_max Hg_gas_median Hg_gas_p05 Hg_gas_p95
+  0.1  1695      0.01         0      0.59        0.4          0          0.171          0.439           0.631        0.397         2,000         1,700             0.0879           0.499          8.02e-06             1          1          1
+    1  1633     0.743         0     0.257          0          0          0.626           0.37               1        0.993         2,250         2,100              0.738           0.632          3.78e-05         0.583       0.19          1
+    5  1672     0.988     0.012         0          0          0          0.829           0.13               1        0.716         2,450         2,350              0.983           0.829          9.40e-05         0.099     0.0311      0.412
+
+Claims (a 'gold band' collects >= 10% of the gold; the 95% bound is the rule of three, 3/n, when no failure is seen in n feeds that contain the metal):
+  Zn: in a gold band in 0 of 5000 feeds; max share 0; 95% bound on the rate 6.00e-04
+  Hg: in a gold band in 0 of 5000 feeds; max share 0; 95% bound on the rate 6.00e-04
+  Pb: in a gold band in 0 of 5000 feeds; max share 0; 95% bound on the rate 6.00e-04
+  Cd: in a gold band in 5000 of 5000 feeds; max share 9.72e-05; 95% bound on the rate -
+  Au_share_in_B: median 60.0%, 5th-95th percentile 10.5%-94.7%
+  Au_share_in_C: median 34.2%, 5th-95th percentile 0.6%-66.0%
+  Au_share_in_D1: median 0.0%, 5th-95th percentile 0.0%-53.9%
+  Au_share_in_D2: median 0.0%, 5th-95th percentile 0.0%-0.0%
+  Au_band_counts: {'A': 20, 'B': 2883, 'C': 1419, 'D1': 678}
+  Pd_band_counts: {'A': 244, 'B': 4755, 'C': 1}
+  Pt_band_counts: {'A': 277, 'B': 4722, 'C': 1}
+  Ag_band_counts: {'D1': 182, 'D2': 4818}
+
+------------------------------------------------------------------------------
+15. Rechecking: a second solver and a second database
+   Script: simulation/scripts/18_independent_verification.py
+------------------------------------------------------------------------------
+Source: verification_independent_solver.csv (2026-09-29 13:12 UTC); verification_independent_data.csv (2026-09-29 13:13 UTC)
+
+Second solver (Cantera VCS, Smith & Missen) on 53 states: converged on 51; same condensed phases in 51 of 51 where both converged; max relative difference 1.89e-03 (condensed), 2.35e-05 (major gas species).
+PARAMANU's own solver passed the certificate in 53 of 53 states; states as used, certified: 53.
+Second database (full NASA CEA, NASA-9) for 23 elements: same main band for 21; median |dT50| 0 K, max 350 K.
+
+element T50_cantera_nasa7 T50_cea_nasa9 diff_K main_band_nasa7 main_band_nasa9 share_main_nasa7 share_same_band_nasa9
+     Al             2,200         2,200      0               B               B            0.998                 0.998
+      C               925           950     25               E               E            0.361                 0.354
+     Ca             2,100         2,100      0               B               B            0.925                 0.911
+     Cl             1,125         1,125      0              D2              D2            0.966                 0.973
+     Cr             1,650         1,650      0               C               C            0.837                 0.838
+     Cu             1,700         1,700      0               C               C            0.901                 0.899
+      F               975             -      -               E             gas             0.55                     0
+     Fe             2,225         2,225      0               B               B            0.961                 0.961
+      H               350           350      0            cold            cold            0.821                  0.81
+     Hg                 -             -      -             gas             gas            0.502                 0.529
+      K             1,125         1,150     25              D2              D2            0.977                 0.961
+     Li               850         1,050    200               E              D2            0.923                 0.156
+     Mg             1,950         1,950      0               C               C            0.984                 0.967
+      N                 -             -      -             gas             gas            0.999                 0.997
+     Na             1,225         1,225      0              D2              D2            0.923                 0.935
+     Ni             1,850         1,850      0               C               C            0.993                 0.993
+      O               350           350      0            cold            cold            0.588                  0.58
+      P               400           750    350               E               E            0.881                     1
+     Pb             1,025         1,025      0              D2              D2            0.785                 0.786
+      S             1,500         1,500      0              D1              D1            0.846                 0.705
+     Si             1,925         1,925      0               C               C            0.607                 0.627
+     Ti             2,825         2,800    -25               A               A            0.975                 0.973
+     Zn               675           675      0               E               E                1                     1
+
+------------------------------------------------------------------------------
+16. Reproducibility on another machine
+   Script: simulation/scripts/19_reproducibility.py
+------------------------------------------------------------------------------
+Source: log_19_reproducibility.txt (2026-09-29 12:58 UTC)
+
+20 sweep feeds recomputed from their seeds, 108 metrics each: largest absolute difference 1.14e-13 (dry_kg); main bands identical: True.
+
+------------------------------------------------------------------------------
+17. Adversarial falsification search
+   Script: simulation/scripts/20_falsification.py
+------------------------------------------------------------------------------
+Source: falsification.csv (2026-09-29 13:42 UTC)
+
+Differential evolution over 56 inputs (masses x1/3-x3, traces and Hg x1/6-x6, pre-treatment 0-30%,
+pressure, every activity coefficient, chloride data), rewarded for putting the metal in a band
+that collects >= 10% of the gold. Falsified if the share exceeds the threshold.
+
+  zinc    : 1,664 feeds tried; worst share in gold bands 0 (threshold 0.01); holds; smallest T50 gap to gold 700 K
+  mercury : 1,664 feeds tried; worst share in gold bands 0 (threshold 0.01); holds; smallest T50 gap to gold 1,350 K
+  cadmium : 1,664 feeds tried; worst share in gold bands 2.54e-04 (threshold 0.001); holds; smallest T50 gap to gold 1,000 K
+  lead    : 1,664 feeds tried; worst share in gold bands 0 (threshold 0.01); holds; smallest T50 gap to gold 650 K
+
+------------------------------------------------------------------------------
+18. Which uncertain inputs matter (Sobol indices)
+   Script: simulation/scripts/21_global_sensitivity.py
+------------------------------------------------------------------------------
+Source: global_sensitivity.csv (2026-09-29 12:55 UTC)
+
+First-order Sobol index = share of an output's variance that one input explains alone.
+
+  1 atm: cadmium in gold bands: pretreat 0.69, mass_nonferrous 0.02, mass_plastics 0.01, gamma_Cd_in_Cu 0.01  (sum of all first-order indices 0.83)
+  1 atm: gold half-condensation T: gamma_Au_in_Fe 0.77, pretreat 0.10, mass_fines 0.04, mass_plastics 0.04  (sum of all first-order indices 1.042)
+  1 atm: gold in Band B: gamma_Au_in_Fe 0.86, pretreat 0.06, mass_fines 0.03, mass_plastics 0.02  (sum of all first-order indices 1.04)
+  1 atm: gold in Bands B+C: mass_fines 0.09, mass_plastics 0.07, pretreat 0.04, gamma_Au_in_Fe 0.01  (sum of all first-order indices 0.279)
+  1 atm: mercury left in gas: hg_ppm 0.65, mass_plastics 0.17, mass_fines 0.06, pretreat 0.01  (sum of all first-order indices 0.95)
+  all: cadmium in gold bands: pretreat 0.33, pressure 0.19, gamma_Au_in_Fe 0.02, mass_plastics 0.01  (sum of all first-order indices 0.608)
+  all: gold half-condensation T: pressure 0.84, gamma_Au_in_Fe 0.12, pretreat 0.02, mass_fines 0.01  (sum of all first-order indices 1.022)
+  all: gold in Band B: pressure 0.83, gamma_Au_in_Fe 0.11, mass_fines 0.01, pretreat 0.00  (sum of all first-order indices 0.978)
+  all: gold in Bands B+C: pressure 0.58, gamma_Au_in_Fe 0.02, pretreat 0.02, trace_Ag 0.01  (sum of all first-order indices 0.662)
+  all: mercury left in gas: pressure 0.78, hg_ppm 0.08, mass_plastics 0.02, mass_fines 0.01  (sum of all first-order indices 0.92)
+
+------------------------------------------------------------------------------
+19. Torch-gas dilution and the margin of the Band D split
+   Script: simulation/scripts/22_dilution_and_margin.py
+------------------------------------------------------------------------------
+Source: dilution_argon.csv (2026-09-29 14:52 UTC)
+
+Default feed with argon added (moles per mole of the heap's own gas):
+Au_in_B Au_in_C Hg_left_in_gas Pb_in_gold_bands T50_Au T50_Cu T50_Fe T50_Pb T50_Zn Zn_in_gold_bands argon_per_heap_gas gold_bands
+  0.581   0.419          0.502                0  2,075  1,700  2,225  1,025    675                0                  0         BC
+    0.5     0.5              1                0  1,975  1,675  2,200  1,000    650                0                0.5         BC
+  0.442   0.558              1                0  1,925  1,650  2,150    975    650                0                  1         BC
+
+Band D split margin, for the lead feed the adversarial search brought closest: 99.9% of the gold has condensed by 1,562 K, the first 0.1% of the lead condenses at 1,012 K; the 1,300 K boundary sits in a 550 K gap.
+
+------------------------------------------------------------------------------
+20. Energy self-sufficiency: own fuel plus sale of recovered elements
+   Script: simulation/scripts/23_self_sufficiency.py
+------------------------------------------------------------------------------
+Source: self_sufficiency.csv (2026-09-29 15:34 UTC)
+
+Saleable products per tonne excavated (spreadsheet prices): $113.4; largest: Au $39.2, Cu $21.3, Fe $11.6, Cr $7.8, Ag $7.5, Ni $5.3.
+Energy account per tonne (electricity $/kWh 0.10 and 0.05):
+      energy_case   fuel_case MWh_needed MWh_from_own_fuel MWh_to_buy sales_share_at_0.10 sales_share_at_0.05 own_fuel_plus_sales_share_at_0.05 break_even_price_per_kWh
+   gross enthalpy equilibrium        2.9             0.126       2.77               0.409               0.818                             0.826                   0.0409
+   gross enthalpy    quenched        2.9               0.6        2.3               0.493               0.987                              0.99                   0.0493
+best demonstrated equilibrium       6.67             0.126       6.54               0.173               0.347                             0.359                   0.0173
+best demonstrated    quenched       6.67               0.6       6.07               0.187               0.374                              0.43                   0.0187
+
+------------------------------------------------------------------------------
+21. Heat recovery, emissivity, modules and grinding
+   Script: simulation/scripts/24_heat_recovery_and_scale.py
+------------------------------------------------------------------------------
+Source: heat_recovery_self_sufficiency.csv (2026-09-29 16:25 UTC)
+
+Condenser-stage heat A-E: 2.264 MWh/t; as electricity via boiler-wall steam (60-70% captured, 30-35% cycle): 0.408-0.555 MWh/t (17.0-23.1 MW at 1,000 t/day).
+Hot-zone emissivity (1,000 t/day, 1 atm):
+emissivity loss_at_25ms residence_ms_for_10pct wall_flux_MW_m2
+       0.3       0.0906                     29            1.18
+       0.6        0.181                   10.3            2.36
+         1        0.302                   4.76            3.94
+Parallel modules:
+emissivity modules residence_ms_for_10pct t_per_day_each torch_MW_each_demonstrated torch_MW_each_gross
+       0.3       1                     29          1,000                        261                 113
+         1       1                   4.76          1,000                        261                 113
+       0.3       2                   20.5            500                        130                56.7
+         1       2                   3.37            500                        130                56.7
+       0.3       4                   14.5            250                       65.2                28.3
+         1       4                   2.38            250                       65.2                28.3
+       0.3      10                   9.17            100                       26.1                11.3
+         1      10                   1.51            100                       26.1                11.3
+Grinding the mineral fraction to 20 um: 29.3 kWh/t (1.0% of the gross enthalpy).
+Self-sufficiency with steam recovery (power at 5 c/kWh):
+MWh_needed MWh_own MWh_to_buy break_even_c_per_kWh coverage_at_0.05       energy_case own_power
+       2.9   0.533       2.36                  4.8            0.967    gross enthalpy       low
+       2.9    1.15       1.74                  6.5             1.18    gross enthalpy      high
+      6.67   0.533       6.13                 1.85             0.42 best demonstrated       low
+      6.67    1.15       5.51                 2.06            0.513 best demonstrated      high
+
+------------------------------------------------------------------------------
+22. Corrections log (fixes that changed results)
+------------------------------------------------------------------------------
+2026-09-28  Sweep analysis: rule-of-three denominator
+    The failure-rate bound divided by all 5,000 feeds, but only 971 contained
+    zinc and lead (soil had none). Fixed the denominator (only feeds that
+    contain the metal count) and gave the soil fines measured heavy metals
+    (Vollprecht et al. 2020), so every feed now contains them.
+2026-09-28  Trace data: two faulty Burcat records rejected
+    PtH (placeholder heat of formation) and SbF (unit error) failed the check
+    of each record against its own stated heat of formation; excluded, with a
+    test that keeps them out.
+2026-09-29  Solver: unconverged ladder steps
+    PARAMANU's solver did not converge at 43 of 229 ladder steps below 1,850 K
+    because parts-per-billion remnants were solved with the major elements.
+    Elements below 1 ppm of the gas are now placed by the dilute-limit solver
+    (Result 3) at the potentials of the majors.
+2026-09-29  Solver backup: Cantera's false convergence
+    Cantera's VCS solver, added as a backup, reported convergence at 0.1 atm
+    for states that are not the equilibrium (graphite with steam and no CO;
+    zinc sulfate), putting zinc/lead/mercury in Bands C and D in 183 of 5,000
+    feeds. Every state must now pass the Result 2 certificate
+    (equilibrium.certify); the affected sweep was discarded and rerun.
+2026-09-29  Solver: missing graphite
+    The certificate found rare carbon-rich states at 0.1 atm, 1,400-1,450 K,
+    where the solver left out graphite (supersaturated x1.4). The NASA CEA
+    phase-set loop (gibbs.refine) now adds it. Before: 569,696 of 570,000
+    sweep states certified; after: all. Claims unchanged.
+2026-09-29  Design: Band D split at 1,300 K (found by the adversarial search)
+    The falsification search (20_falsification.py) found organic-rich feeds at
+    1-1.4 atm where 10-40% of the gold condenses at 1,300-1,600 K, inside Band
+    D (1,000-1,600 K) with lead: up to 49% of the lead was in a band holding
+    >= 10% of the gold. Gold and lead never condense at the same temperature
+    (checked on 17 feeds), so Band D is now D1 (1,300-1,600 K) and D2
+    (1,000-1,300 K). The sweep and the search were rerun on the revised
+    design: no lead in any gold band in 5,000 sweep feeds or in 1,664
+    adversarial feeds; zinc, mercury 0%, cadmium <= 0.025%.
+2026-09-29  Hot-zone design: consistent basis (pre-publication review)
+    08_reactor_design.py divided energy and gas by the 961 kg entering the
+    reactor but multiplied by 1,000 t/day of excavated material. Now per
+    excavated tonne throughout: 9.8 MJ/kg and 35.1 mol/kg (drying excluded),
+    96 m3/s of hot gas (was 100), torch power 113 MW without losses, 119/126
+    MW at 5%/10% radiation loss (was 124/130); residence limits (25 and 10 ms)
+    and the 4.2 s batch time constant unchanged.

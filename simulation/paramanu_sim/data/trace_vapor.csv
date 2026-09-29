@@ -1,0 +1,18 @@
+# Normal boiling points and enthalpies of vaporization at the boiling point.
+# Source: CRC Handbook of Chemistry and Physics (95th ed., Haynes 2014), rounded.
+# Values for Sb and Bi depend on the vapor species (Sb4, Bi2); treat as +/-15%.
+element,molar_mass,t_boil_K,dh_vap_kJ
+Au,196.967,3129,324
+Ag,107.868,2435,255
+Pd,106.42,3236,357
+Pt,195.08,4098,469
+Sn,118.71,2875,296
+Sb,121.76,1860,193
+Cd,112.41,1040,100
+Co,58.933,3200,377
+Mn,54.938,2334,221
+Bi,208.98,1837,151
+In,114.82,2345,232
+Ga,69.723,2673,254
+Nd,144.24,3347,289
+W,183.84,5828,799

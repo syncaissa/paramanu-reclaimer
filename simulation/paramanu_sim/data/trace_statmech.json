@@ -1,0 +1,108 @@
+{
+ "note": "Gas species computed by rigid-rotor/harmonic-oscillator statistical mechanics from measured molecular constants, anchored at a measured enthalpy of formation. dfH298_kJ is the recommended value; dfH298_kJ_min / _max bound it by the widest published uncertainty (min = most stable = most volatile metal). Vibrations are fundamentals [cm-1, degeneracy]; electronic levels [cm-1, degeneracy].",
+ "species": [
+  {
+   "name": "AgCl",
+   "composition": {
+    "Ag": 1,
+    "Cl": 1
+   },
+   "linear": true,
+   "symmetry_number": 1,
+   "rotational_cm1": [
+    0.12298388
+   ],
+   "vibrations_cm1": [
+    [
+     341.15,
+     1
+    ]
+   ],
+   "electronic_levels": [
+    [
+     0.0,
+     1
+    ]
+   ],
+   "dfH298_kJ": 92.0,
+   "dfH298_kJ_min": 83.6,
+   "dfH298_kJ_max": 100.4,
+   "source": "dfH298: Hildenbrand & Lau, High Temp. Mater. Sci. 35 (1996) 11 (92.0+/-1.3; bracket uses the +/-8.4 of Glushko, Thermal Constants of Substances). Constants: Huber & Herzberg (1979) via NIST WebBook, we=343.49, wexe=1.17 (fundamental we-2wexe), Be=0.12298388; X1Sigma+, no states below 20000 cm-1.",
+   "note": "check: S298 computed here vs NBS82 245.92 J/mol/K (tests/test_trace.py)"
+  },
+  {
+   "name": "AuCl",
+   "composition": {
+    "Au": 1,
+    "Cl": 1
+   },
+   "linear": true,
+   "symmetry_number": 1,
+   "rotational_cm1": [
+    0.1173891
+   ],
+   "vibrations_cm1": [
+    [
+     383.3,
+     1
+    ]
+   ],
+   "electronic_levels": [
+    [
+     0.0,
+     1
+    ],
+    [
+     19113.8,
+     1
+    ],
+    [
+     19238.3,
+     1
+    ]
+   ],
+   "dfH298_kJ": 209.6,
+   "dfH298_kJ_min": 196.6,
+   "dfH298_kJ_max": 222.6,
+   "source": "dfH from D0(Au-Cl)=276+/-13 kJ/mol, Brown, Schwerdtfeger, Schroder & Schwarz, J. Am. Soc. Mass Spectrom. 13 (2002) 485 (NBS82 value 197 lies inside the range). Constants: Be=3519.238 MHz, Evans & Gerry, J. Mol. Spectrosc. 203 (2000) 105; we=383.30 and excited states, Huber & Herzberg (1979).",
+   "note": "no direct measurement of dfH(AuCl,g) exists; hence the +/-13 kJ/mol bracket"
+  },
+  {
+   "name": "CdCl2",
+   "composition": {
+    "Cd": 1,
+    "Cl": 2
+   },
+   "linear": true,
+   "symmetry_number": 2,
+   "rotational_cm1": [
+    0.045654
+   ],
+   "vibrations_cm1": [
+    [
+     325.0,
+     1
+    ],
+    [
+     83.0,
+     2
+    ],
+    [
+     419.0,
+     1
+    ]
+   ],
+   "electronic_levels": [
+    [
+     0.0,
+     1
+    ]
+   ],
+   "dfH298_kJ": -194.6,
+   "dfH298_kJ_min": -220.0,
+   "dfH298_kJ_max": -190.0,
+   "source": "dfH298: Glushko, Thermal Constants of Substances (TKV) -194.56+/-4.6; effusion (Skudlarski et al., J. Chem. Thermodyn. 19 (1987) 857) and transpiration (Dharwadkar et al., Thermochim. Acta 217 (1993) 175) sublimation enthalpies suggest -210 to -220, used as the most-stable bound. r(Cd-Cl)=2.282 A: Haaland, Martinsen & Tremmel, Acta Chem. Scand. 46 (1992) 589 (B computed from r). Frequencies: Strull, Givan & Loewenschuss, J. Mol. Spectrosc. 62 (1976) 283 (nu1, nu3); Malt'sev et al. (1971) (nu2).",
+   "note": "rotational constant computed from the electron-diffraction bond length"
+  }
+ ]
+}

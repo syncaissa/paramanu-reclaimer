@@ -1,0 +1,13 @@
+nasa_cea_thermo.inp - NASA CEA thermodynamic database (NASA-9 polynomials)
+
+Source:   https://raw.githubusercontent.com/nasa/cea/main/data/thermo.inp
+          (repository https://github.com/nasa/cea, last commit touching the file 985fd33, 2026-06-22)
+SHA-256:  fa7746572952d74e249e818a82a35c113829742fb421a308e167185528884363
+License:  Apache License 2.0 (the nasa/cea repository); NASA data are US Government works.
+          Redistributed unchanged. http://www.apache.org/licenses/LICENSE-2.0
+Citation: McBride, B.J., Zehe, M.J., Gordon, S. (2002). NASA Glenn Coefficients for
+          Calculating Thermodynamic Properties of Individual Species. NASA/TP-2002-211556.
+
+Used only by scripts/18_independent_verification.py, as the independent second
+database against which the model's NASA-7 data (from Cantera) are checked.
+Check your copy:  sha256sum nasa_cea_thermo.inp

@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+# LaTeX build files
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.out
+*.bbl
+*.blg
+*.synctex.gz
+paper/paramanu_paper.pdf
+# simulation scratch (keep the logs of the published sweep as provenance)
+simulation/results/log_*.txt
+!simulation/results/log_06_sweep_5000.txt
+!simulation/results/log_12_sweep_analysis.txt
+simulation/results/*.partial.jsonl
+
+# local credentials (never commit)
+.runpodapi
+.githubapi
+simulation/results/superseded/
+docs/all_explained/tables/
+
+# workspace (kept in this folder, never committed or published)
+/forGithub/
+/DO_NOT_USE/
+/research_notes/
+/RESUME_HERE.md
+/linkedin_preview.txt
+/WIP_and_brainstorm/
